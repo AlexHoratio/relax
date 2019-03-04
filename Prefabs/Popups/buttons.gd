@@ -28,10 +28,15 @@ func _process(delta):
 	
 	if(not(button_id == "-1")):
 		get_node("../names/" + plant_name).position = get_node("../names/" + plant_name).position.linear_interpolate(Vector2(740, 113), 0.1)
+		get_node("../descriptions/" + plant_name).modulate.a = lerp(get_node("../descriptions/" + plant_name).modulate.a, 1, 0.1)
 		
 	for i in get_node("../names").get_children():
 		if(not(i.name == plant_name)):
 			i.position = i.position.linear_interpolate(Vector2(740, -112), 0.05)
+			
+	for i in get_node("../descriptions").get_children():
+		if(not(i.name == plant_name)):
+			i.modulate.a = lerp(i.modulate.a, 0, 0.2)
 
 	#get_node("../name").texture = load("res://Graphics/Plants/BigName/" + plant_name + ".png")
 	

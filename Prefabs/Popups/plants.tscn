@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Popups/plants.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Screens/plants.png" type="Texture" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://Graphics/Plants/violet.png" type="Texture" id=8]
 [ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=9]
 [ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=11]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=12]
 
 [sub_resource type="Animation" id=1]
 resource_name = "scroll_in"
@@ -42,6 +43,10 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, -426.428 ), Vector2( 0, -432 ) ]
 }
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 11 )
 
 [node name="plants" type="Node2D"]
 position = Vector2( 0, -426.428 )
@@ -238,11 +243,35 @@ position = Vector2( 740, 112.428 )
 scale = Vector2( 4, 3.99995 )
 texture = ExtResource( 10 )
 
+[node name="descriptions" type="Node2D" parent="."]
+
+[node name="rose" type="Label" parent="descriptions"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 539.0
+margin_top = 116.0
+margin_right = 960.0
+margin_bottom = 228.0
+custom_fonts/font = SubResource( 3 )
+text = "Nice and easy. :D"
+align = 1
+valign = 1
+
+[node name="violet" type="Label" parent="descriptions"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 539.0
+margin_top = 116.0
+margin_right = 960.0
+margin_bottom = 228.0
+custom_fonts/font = SubResource( 3 )
+text = "Purple!"
+align = 1
+valign = 1
+
 [node name="exit" type="TextureButton" parent="."]
 margin_right = 240.0
 margin_bottom = 135.0
 rect_scale = Vector2( 4, 4 )
-texture_click_mask = ExtResource( 11 )
+texture_click_mask = ExtResource( 12 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
