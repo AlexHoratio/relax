@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/mask.bmp-7bade503c5463c4294f62225ceb517eb.res"
+
+[deps]
+
+source_file="res://Graphics/Flowerbed/Plots/plot4/mask.bmp"
+dest_files=[ "res://.import/mask.bmp-7bade503c5463c4294f62225ceb517eb.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

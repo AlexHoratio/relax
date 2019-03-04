@@ -1,0 +1,762 @@
+[gd_scene load_steps=111 format=2]
+
+[ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
+[ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Buttons/Quit/down.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Buttons/Quit/over.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Buttons/Quit/mask.bmp" type="BitMap" id=5]
+[ext_resource path="res://Graphics/Buttons/Plant/normal.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Buttons/Plant/down.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Buttons/Plant/over.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Buttons/Plant/mask.bmp" type="BitMap" id=9]
+[ext_resource path="res://Scenes/flowerbed.gd" type="Script" id=10]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot1/normal.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot1/over.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot2/normal.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot2/over.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot3/normal.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot3/over.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot4/normal.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot4/over.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot5/normal.png" type="Texture" id=19]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot5/over.png" type="Texture" id=20]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot6/normal.png" type="Texture" id=21]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot6/over.png" type="Texture" id=22]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot7/normal.png" type="Texture" id=23]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot7/over.png" type="Texture" id=24]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot8/normal.png" type="Texture" id=25]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot8/over.png" type="Texture" id=26]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot9/normal.png" type="Texture" id=27]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot9/over.png" type="Texture" id=28]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot10/normal.png" type="Texture" id=29]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot10/over.png" type="Texture" id=30]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot11/normal.png" type="Texture" id=31]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot11/over.png" type="Texture" id=32]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot12/normal.png" type="Texture" id=33]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot12/over.png" type="Texture" id=34]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot13/normal.png" type="Texture" id=35]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot13/over.png" type="Texture" id=36]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot14/normal.png" type="Texture" id=37]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot14/over.png" type="Texture" id=38]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot15/normal.png" type="Texture" id=39]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot15/over.png" type="Texture" id=40]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot16/normal.png" type="Texture" id=41]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot16/over.png" type="Texture" id=42]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot17/normal.png" type="Texture" id=43]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot17/over.png" type="Texture" id=44]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot18/normal.png" type="Texture" id=45]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot18/over.png" type="Texture" id=46]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot19/normal.png" type="Texture" id=47]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot19/over.png" type="Texture" id=48]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot20/normal.png" type="Texture" id=49]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot20/over.png" type="Texture" id=50]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot21/normal.png" type="Texture" id=51]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot21/over.png" type="Texture" id=52]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot22/normal.png" type="Texture" id=53]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot22/over.png" type="Texture" id=54]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot23/normal.png" type="Texture" id=55]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot23/over.png" type="Texture" id=56]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot24/normal.png" type="Texture" id=57]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot24/over.png" type="Texture" id=58]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot25/normal.png" type="Texture" id=59]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot25/over.png" type="Texture" id=60]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot26/normal.png" type="Texture" id=61]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot26/over.png" type="Texture" id=62]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot27/normal.png" type="Texture" id=63]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot27/over.png" type="Texture" id=64]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot28/normal.png" type="Texture" id=65]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot28/over.png" type="Texture" id=66]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot29/normal.png" type="Texture" id=67]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot29/over.png" type="Texture" id=68]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot30/normal.png" type="Texture" id=69]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot30/over.png" type="Texture" id=70]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot31/normal.png" type="Texture" id=71]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot31/over.png" type="Texture" id=72]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot32/normal.png" type="Texture" id=73]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot32/over.png" type="Texture" id=74]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var mouse_entered = false
+
+func _ready():
+	pass
+	
+func _process(delta):
+	if(mouse_entered):
+		position = position.linear_interpolate(Vector2(5, 5), 0.1)
+	else:
+		position = position.linear_interpolate(Vector2(0, 0), 0.1)
+
+func _on_quit_mouse_entered():
+	mouse_entered = true
+
+func _on_quit_mouse_exited():
+	mouse_entered = false
+
+func _on_quit_pressed():
+	#do the \"are you sure\" popup
+	var popup = RESOURCES.areyousure_popup.instance()
+	get_node(\"..\").add_child(popup)
+	get_node(\"../screen_shadow/AnimationPlayer\").play(\"fade_in\")
+	popup.connect(\"cancel\", self, \"cancel_quit\", [popup])
+	
+func cancel_quit(popup):
+	get_node(\"../screen_shadow/AnimationPlayer\").play(\"fade_out\")
+	popup.disappear()
+	"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node2D
+
+signal cancel
+
+var mouse_entered = false
+
+func _ready():
+	pass
+	
+func _process(delta):
+	if(mouse_entered):
+		position = position.linear_interpolate(Vector2(0, -5), 0.1)
+	else:
+		position = position.linear_interpolate(Vector2(0, 0), 0.1)
+
+func _on_plant_mouse_entered():
+	mouse_entered = true
+
+func _on_plant_mouse_exited():
+	mouse_entered = false
+
+func _on_plant_pressed():
+	var popup = RESOURCES.plant_popup.instance()
+	get_node(\"..\").add_child(popup)
+	get_node(\"../screen_shadow/AnimationPlayer\").play(\"fade_in\")
+	popup.connect(\"cancel\", self, \"cancel_quit\", [popup])
+	
+func cancel_quit(popup):
+	get_node(\"../screen_shadow/AnimationPlayer\").play(\"fade_out\")
+"
+
+[sub_resource type="BitMap" id=3]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 248, 3, 192, 127, 0, 254, 15, 224, 255, 0, 254, 15, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 0, 254, 7, 192, 63, 0, 248, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=4]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 112, 0, 192, 63, 0, 254, 7, 240, 255, 0, 255, 15, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 240, 255, 1, 254, 15, 192, 127, 0, 248, 3, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=5]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 248, 1, 192, 127, 0, 254, 15, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 0, 254, 7, 192, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=6]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 224, 31, 0, 255, 3, 248, 127, 128, 255, 15, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 0, 255, 7, 224, 63, 0, 252, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=7]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 15, 0, 252, 3, 224, 127, 0, 255, 15, 248, 255, 193, 255, 31, 252, 255, 193, 255, 31, 252, 255, 193, 255, 31, 248, 255, 129, 255, 15, 248, 127, 0, 255, 3, 224, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=8]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 248, 3, 192, 127, 0, 254, 15, 240, 255, 1, 255, 31, 240, 255, 3, 255, 63, 240, 255, 3, 255, 63, 240, 255, 1, 255, 31, 240, 255, 1, 254, 15, 192, 127, 0, 248, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=9]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 248, 1, 192, 63, 0, 254, 7, 240, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 240, 255, 0, 254, 7, 192, 63, 0, 248, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=10]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 224, 0, 128, 31, 0, 252, 3, 224, 127, 0, 254, 15, 240, 255, 0, 255, 15, 240, 255, 0, 255, 15, 240, 255, 0, 255, 15, 240, 255, 0, 254, 7, 192, 63, 0, 248, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=11]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 248, 1, 192, 63, 0, 254, 7, 240, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 240, 255, 0, 254, 7, 128, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=12]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 240, 1, 128, 63, 0, 252, 7, 224, 255, 0, 255, 15, 240, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 15, 248, 255, 0, 255, 15, 192, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=13]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 252, 7, 224, 255, 0, 254, 15, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 0, 254, 7, 128, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=14]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 15, 0, 252, 7, 224, 255, 0, 255, 31, 248, 255, 131, 255, 63, 248, 255, 131, 255, 63, 248, 255, 131, 255, 63, 240, 255, 1, 254, 15, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=15]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 31, 0, 252, 3, 224, 127, 0, 255, 7, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 0, 255, 15, 240, 127, 0, 254, 3, 128, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=16]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 248, 3, 192, 127, 0, 254, 15, 240, 255, 0, 255, 15, 240, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 240, 255, 0, 252, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=17]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 252, 7, 224, 255, 0, 255, 31, 240, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 240, 255, 0, 254, 7, 192, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=18]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 248, 7, 192, 127, 0, 254, 15, 240, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 240, 127, 0, 254, 7, 192, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=19]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 248, 1, 192, 63, 0, 254, 3, 240, 63, 0, 255, 7, 240, 255, 128, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 15, 248, 127, 0, 255, 3, 224, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=20]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 224, 0, 128, 31, 0, 252, 3, 224, 63, 0, 255, 7, 240, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 0, 255, 7, 240, 127, 0, 254, 3, 192, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=21]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 224, 3, 128, 127, 0, 252, 15, 224, 255, 0, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 0, 255, 15, 224, 127, 0, 252, 3, 128, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=22]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 252, 3, 224, 127, 0, 255, 15, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 1, 255, 15, 224, 127, 0, 252, 3, 128, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=23]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 31, 0, 252, 3, 224, 127, 0, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 240, 127, 0, 254, 3, 192, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=24]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 248, 3, 192, 127, 0, 254, 15, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 254, 15, 192, 127, 0, 248, 3, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=25]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 31, 0, 254, 7, 240, 255, 0, 255, 31, 240, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 0, 255, 7, 224, 63, 0, 252, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=26]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 248, 7, 192, 255, 0, 254, 15, 240, 255, 0, 255, 15, 240, 255, 0, 255, 15, 240, 255, 0, 255, 15, 224, 127, 0, 252, 7, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=27]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 15, 0, 252, 1, 224, 63, 0, 255, 7, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 0, 255, 15, 240, 127, 0, 254, 7, 192, 63, 0, 248, 1, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=28]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 224, 0, 128, 31, 0, 252, 3, 224, 127, 0, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 248, 255, 128, 255, 15, 240, 127, 0, 254, 3, 192, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=29]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 224, 1, 0, 63, 0, 248, 7, 192, 255, 0, 254, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 0, 255, 15, 240, 127, 0, 254, 3, 192, 31, 0, 248, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=30]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 0, 252, 15, 224, 255, 1, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 1, 255, 31, 240, 255, 1, 254, 15, 192, 127, 0, 248, 3, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=31]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 127, 0, 254, 15, 240, 255, 1, 255, 31, 248, 255, 129, 255, 31, 248, 255, 129, 255, 31, 248, 255, 128, 255, 7, 240, 63, 0, 254, 1, 128, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=32]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 192, 31, 0, 254, 15, 240, 255, 129, 255, 63, 248, 255, 131, 255, 63, 248, 255, 131, 255, 63, 248, 255, 1, 255, 15, 224, 127, 0, 252, 3, 128, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=33]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 240, 3, 128, 255, 0, 252, 31, 224, 255, 3, 254, 63, 240, 255, 3, 255, 63, 240, 255, 3, 255, 63, 240, 255, 1, 254, 15, 192, 127, 0, 248, 3, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="BitMap" id=34]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 126, 0, 248, 15, 192, 255, 0, 254, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 1, 255, 31, 240, 255, 0, 254, 7, 192, 63, 0, 240, 0, 0, 0, 0, 0, 0, 0 ),
+"size": Vector2( 20, 20 )
+}
+
+[sub_resource type="Animation" id=35]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 0.378929, 0.120742 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=36]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 0.25, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[node name="garden" type="Node2D"]
+
+[node name="screen" type="Sprite" parent="."]
+position = Vector2( 480, 270 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+
+[node name="quit" type="Node2D" parent="."]
+editor/display_folded = true
+script = SubResource( 1 )
+
+[node name="quit" type="TextureButton" parent="quit"]
+margin_left = 706.0
+margin_right = 770.0
+margin_bottom = 44.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_click_mask = ExtResource( 5 )
+
+[node name="plant" type="Node2D" parent="."]
+script = SubResource( 2 )
+
+[node name="plant" type="TextureButton" parent="plant"]
+margin_left = 8.0
+margin_right = 74.0
+margin_bottom = 40.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+texture_click_mask = ExtResource( 9 )
+
+[node name="flowerbed" type="Node2D" parent="."]
+editor/display_folded = true
+scale = Vector2( 4, 4 )
+script = ExtResource( 10 )
+
+[node name="plot1" type="TextureButton" parent="flowerbed"]
+margin_left = 41.5
+margin_top = 30.5
+margin_right = 61.5
+margin_bottom = 50.5
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+texture_click_mask = SubResource( 3 )
+
+[node name="plot2" type="TextureButton" parent="flowerbed"]
+margin_left = 59.5
+margin_top = 30.5
+margin_right = 79.5
+margin_bottom = 50.5
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_click_mask = SubResource( 4 )
+
+[node name="plot3" type="TextureButton" parent="flowerbed"]
+margin_left = 77.5
+margin_top = 32.25
+margin_right = 97.5
+margin_bottom = 52.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 16 )
+texture_click_mask = SubResource( 5 )
+
+[node name="plot4" type="TextureButton" parent="flowerbed"]
+margin_left = 96.5
+margin_top = 30.5
+margin_right = 116.5
+margin_bottom = 50.5
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 17 )
+texture_hover = ExtResource( 18 )
+texture_click_mask = SubResource( 6 )
+
+[node name="plot5" type="TextureButton" parent="flowerbed"]
+margin_left = 115.5
+margin_top = 32.25
+margin_right = 135.5
+margin_bottom = 52.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 20 )
+texture_click_mask = SubResource( 7 )
+
+[node name="plot6" type="TextureButton" parent="flowerbed"]
+margin_left = 132.75
+margin_top = 30.5
+margin_right = 152.75
+margin_bottom = 50.5
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 21 )
+texture_hover = ExtResource( 22 )
+texture_click_mask = SubResource( 8 )
+
+[node name="plot7" type="TextureButton" parent="flowerbed"]
+margin_left = 150.5
+margin_top = 30.5
+margin_right = 170.5
+margin_bottom = 50.5
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_click_mask = SubResource( 9 )
+
+[node name="plot8" type="TextureButton" parent="flowerbed"]
+margin_left = 166.75
+margin_top = 30.5
+margin_right = 186.75
+margin_bottom = 50.5
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 25 )
+texture_hover = ExtResource( 26 )
+texture_click_mask = SubResource( 10 )
+
+[node name="plot9" type="TextureButton" parent="flowerbed"]
+margin_left = 41.5
+margin_top = 49.25
+margin_right = 61.5
+margin_bottom = 69.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_click_mask = SubResource( 11 )
+
+[node name="plot10" type="TextureButton" parent="flowerbed"]
+margin_left = 58.5
+margin_top = 49.25
+margin_right = 78.5
+margin_bottom = 69.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 29 )
+texture_hover = ExtResource( 30 )
+texture_click_mask = SubResource( 12 )
+
+[node name="plot11" type="TextureButton" parent="flowerbed"]
+margin_left = 75.75
+margin_top = 49.25
+margin_right = 95.75
+margin_bottom = 69.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 31 )
+texture_hover = ExtResource( 32 )
+texture_click_mask = SubResource( 13 )
+
+[node name="plot12" type="TextureButton" parent="flowerbed"]
+margin_left = 94.75
+margin_top = 49.25
+margin_right = 114.75
+margin_bottom = 69.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 33 )
+texture_hover = ExtResource( 34 )
+texture_click_mask = SubResource( 14 )
+
+[node name="plot13" type="TextureButton" parent="flowerbed"]
+margin_left = 114.75
+margin_top = 49.25
+margin_right = 134.75
+margin_bottom = 69.25
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 35 )
+texture_hover = ExtResource( 36 )
+texture_click_mask = SubResource( 15 )
+
+[node name="plot14" type="TextureButton" parent="flowerbed"]
+margin_left = 132.75
+margin_top = 47.75
+margin_right = 152.75
+margin_bottom = 67.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 37 )
+texture_hover = ExtResource( 38 )
+texture_click_mask = SubResource( 16 )
+
+[node name="plot15" type="TextureButton" parent="flowerbed"]
+margin_left = 149.5
+margin_top = 47.75
+margin_right = 169.5
+margin_bottom = 67.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 39 )
+texture_hover = ExtResource( 40 )
+texture_click_mask = SubResource( 17 )
+
+[node name="plot16" type="TextureButton" parent="flowerbed"]
+margin_left = 166.75
+margin_top = 47.75
+margin_right = 186.75
+margin_bottom = 67.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 41 )
+texture_hover = ExtResource( 42 )
+texture_click_mask = SubResource( 18 )
+
+[node name="plot17" type="TextureButton" parent="flowerbed"]
+margin_left = 41.5
+margin_top = 65.75
+margin_right = 61.5
+margin_bottom = 85.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 43 )
+texture_hover = ExtResource( 44 )
+texture_click_mask = SubResource( 19 )
+
+[node name="plot18" type="TextureButton" parent="flowerbed"]
+margin_left = 59.5
+margin_top = 64.75
+margin_right = 79.5
+margin_bottom = 84.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 45 )
+texture_hover = ExtResource( 46 )
+texture_click_mask = SubResource( 20 )
+
+[node name="plot19" type="TextureButton" parent="flowerbed"]
+margin_left = 76.75
+margin_top = 64.75
+margin_right = 96.75
+margin_bottom = 84.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 47 )
+texture_hover = ExtResource( 48 )
+texture_click_mask = SubResource( 21 )
+
+[node name="plot20" type="TextureButton" parent="flowerbed"]
+margin_left = 95.75
+margin_top = 64.75
+margin_right = 115.75
+margin_bottom = 84.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 49 )
+texture_hover = ExtResource( 50 )
+texture_click_mask = SubResource( 22 )
+
+[node name="plot21" type="TextureButton" parent="flowerbed"]
+margin_left = 114.75
+margin_top = 64.75
+margin_right = 134.75
+margin_bottom = 84.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 51 )
+texture_hover = ExtResource( 52 )
+texture_click_mask = SubResource( 23 )
+
+[node name="plot22" type="TextureButton" parent="flowerbed"]
+margin_left = 132.75
+margin_top = 64.0
+margin_right = 152.75
+margin_bottom = 84.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 53 )
+texture_hover = ExtResource( 54 )
+texture_click_mask = SubResource( 24 )
+
+[node name="plot23" type="TextureButton" parent="flowerbed"]
+margin_left = 149.5
+margin_top = 64.0
+margin_right = 169.5
+margin_bottom = 84.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 55 )
+texture_hover = ExtResource( 56 )
+texture_click_mask = SubResource( 25 )
+
+[node name="plot24" type="TextureButton" parent="flowerbed"]
+margin_left = 165.75
+margin_top = 64.0
+margin_right = 185.75
+margin_bottom = 84.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 57 )
+texture_hover = ExtResource( 58 )
+texture_click_mask = SubResource( 26 )
+
+[node name="plot25" type="TextureButton" parent="flowerbed"]
+margin_left = 42.5
+margin_top = 79.75
+margin_right = 62.5
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 59 )
+texture_hover = ExtResource( 60 )
+texture_click_mask = SubResource( 27 )
+
+[node name="plot26" type="TextureButton" parent="flowerbed"]
+margin_left = 59.5
+margin_top = 79.75
+margin_right = 79.5
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 61 )
+texture_hover = ExtResource( 62 )
+texture_click_mask = SubResource( 28 )
+
+[node name="plot27" type="TextureButton" parent="flowerbed"]
+margin_left = 76.75
+margin_top = 79.75
+margin_right = 96.75
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 63 )
+texture_hover = ExtResource( 64 )
+texture_click_mask = SubResource( 29 )
+
+[node name="plot28" type="TextureButton" parent="flowerbed"]
+margin_left = 95.75
+margin_top = 79.75
+margin_right = 115.75
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 65 )
+texture_hover = ExtResource( 66 )
+texture_click_mask = SubResource( 30 )
+
+[node name="plot29" type="TextureButton" parent="flowerbed"]
+margin_left = 113.75
+margin_top = 79.75
+margin_right = 133.75
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 67 )
+texture_hover = ExtResource( 68 )
+texture_click_mask = SubResource( 31 )
+
+[node name="plot30" type="TextureButton" parent="flowerbed"]
+margin_left = 131.5
+margin_top = 79.75
+margin_right = 151.5
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 69 )
+texture_hover = ExtResource( 70 )
+texture_click_mask = SubResource( 32 )
+
+[node name="plot31" type="TextureButton" parent="flowerbed"]
+margin_left = 148.75
+margin_top = 79.75
+margin_right = 168.75
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 71 )
+texture_hover = ExtResource( 72 )
+texture_click_mask = SubResource( 33 )
+
+[node name="plot32" type="TextureButton" parent="flowerbed"]
+margin_left = 165.75
+margin_top = 79.75
+margin_right = 185.75
+margin_bottom = 99.75
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 73 )
+texture_hover = ExtResource( 74 )
+texture_click_mask = SubResource( 34 )
+
+[node name="screen_shadow" type="ColorRect" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 960.0
+margin_bottom = 540.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.666667 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="screen_shadow"]
+anims/fade_in = SubResource( 35 )
+anims/fade_out = SubResource( 36 )
+
+[connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="quit/quit" to="quit" method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="plant/plant" to="plant" method="_on_plant_mouse_entered"]
+[connection signal="mouse_exited" from="plant/plant" to="plant" method="_on_plant_mouse_exited"]
+[connection signal="pressed" from="plant/plant" to="plant" method="_on_plant_pressed"]
