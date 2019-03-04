@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Popups/plants.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Screens/plants.png" type="Texture" id=2]
@@ -7,8 +7,10 @@
 [ext_resource path="res://Graphics/Buttons/SeedBuy/down.png" type="Texture" id=5]
 [ext_resource path="res://Graphics/Buttons/SeedBuy/locked.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/Plants/rose.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=9]
+[ext_resource path="res://Graphics/Plants/violet.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "scroll_in"
@@ -39,34 +41,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 0.31864, 1, 0.189465 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, -426.428 ), Vector2( 0, -432 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "move"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 2, 0.554785 ),
-"update": 0,
-"values": [ Vector2( 740, 114 ), Vector2( 740, 146.428 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 7.46426, 0.233258 ),
-"update": 0,
-"values": [ Vector2( 4, 4 ), Vector2( 4, 3.5 ) ]
 }
 
 [node name="plants" type="Node2D"]
@@ -105,7 +79,6 @@ position = Vector2( 8.5, 12.25 )
 texture = ExtResource( 7 )
 
 [node name="2" type="TextureButton" parent="buttons"]
-editor/display_folded = true
 margin_left = 137.0
 margin_top = 36.0
 margin_right = 154.0
@@ -120,8 +93,8 @@ texture_disabled = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="buttons/2"]
 visible = false
-position = Vector2( 8.5, 12.25 )
-texture = ExtResource( 7 )
+position = Vector2( 8.5, 9.857 )
+texture = ExtResource( 8 )
 
 [node name="3" type="TextureButton" parent="buttons"]
 margin_left = 244.0
@@ -253,20 +226,23 @@ texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_disabled = ExtResource( 6 )
 
-[node name="name" type="Sprite" parent="."]
-position = Vector2( 740, 116.755 )
-scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 8 )
+[node name="names" type="Node2D" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="name"]
-autoplay = "move"
-anims/move = SubResource( 3 )
+[node name="rose" type="Sprite" parent="names"]
+position = Vector2( 740, 112.428 )
+scale = Vector2( 4, 3.99995 )
+texture = ExtResource( 9 )
+
+[node name="violet" type="Sprite" parent="names"]
+position = Vector2( 740, 112.428 )
+scale = Vector2( 4, 3.99995 )
+texture = ExtResource( 10 )
 
 [node name="exit" type="TextureButton" parent="."]
 margin_right = 240.0
 margin_bottom = 135.0
 rect_scale = Vector2( 4, 4 )
-texture_click_mask = ExtResource( 9 )
+texture_click_mask = ExtResource( 11 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
