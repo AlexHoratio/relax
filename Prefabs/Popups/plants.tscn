@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Popups/plants.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Screens/plants.png" type="Texture" id=2]
@@ -8,10 +8,14 @@
 [ext_resource path="res://Graphics/Buttons/SeedBuy/locked.png" type="Texture" id=6]
 [ext_resource path="res://Graphics/Plants/rose.png" type="Texture" id=7]
 [ext_resource path="res://Graphics/Plants/violet.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=12]
+[ext_resource path="res://Graphics/Plants/chamomile.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Plants/BigName/chamomile.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=14]
+[ext_resource path="res://Graphics/Buttons/Buy/normal.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Buttons/Buy/mask.bmp" type="BitMap" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "scroll_in"
@@ -46,7 +50,7 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
-font_data = ExtResource( 11 )
+font_data = ExtResource( 13 )
 
 [node name="plants" type="Node2D"]
 position = Vector2( 0, -426.428 )
@@ -84,6 +88,7 @@ position = Vector2( 8.5, 12.25 )
 texture = ExtResource( 7 )
 
 [node name="2" type="TextureButton" parent="buttons"]
+editor/display_folded = true
 margin_left = 137.0
 margin_top = 36.0
 margin_right = 154.0
@@ -102,6 +107,7 @@ position = Vector2( 8.5, 9.857 )
 texture = ExtResource( 8 )
 
 [node name="3" type="TextureButton" parent="buttons"]
+editor/display_folded = true
 margin_left = 244.0
 margin_top = 36.0
 margin_right = 261.0
@@ -113,6 +119,11 @@ action_mode = 0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_disabled = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="buttons/3"]
+visible = false
+position = Vector2( 9, 10 )
+texture = ExtResource( 9 )
 
 [node name="4" type="TextureButton" parent="buttons"]
 margin_left = 352.0
@@ -232,21 +243,28 @@ texture_pressed = ExtResource( 5 )
 texture_disabled = ExtResource( 6 )
 
 [node name="names" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="rose" type="Sprite" parent="names"]
-position = Vector2( 740, 112.428 )
-scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 9 )
-
-[node name="violet" type="Sprite" parent="names"]
-position = Vector2( 740, 112.428 )
+position = Vector2( 740, -26.5734 )
 scale = Vector2( 4, 3.99995 )
 texture = ExtResource( 10 )
 
+[node name="violet" type="Sprite" parent="names"]
+position = Vector2( 740, -26.5734 )
+scale = Vector2( 4, 3.99995 )
+texture = ExtResource( 11 )
+
+[node name="chamomile" type="Sprite" parent="names"]
+position = Vector2( 740, -26.5734 )
+scale = Vector2( 4, 3.99995 )
+texture = ExtResource( 12 )
+
 [node name="descriptions" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="rose" type="Label" parent="descriptions"]
-modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+modulate = Color( 0.505882, 0.356863, 0.25098, 0 )
 margin_left = 539.0
 margin_top = 116.0
 margin_right = 960.0
@@ -257,7 +275,7 @@ align = 1
 valign = 1
 
 [node name="violet" type="Label" parent="descriptions"]
-modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+modulate = Color( 0.505882, 0.356863, 0.25098, 0 )
 margin_left = 539.0
 margin_top = 116.0
 margin_right = 960.0
@@ -267,11 +285,31 @@ text = "Purple!"
 align = 1
 valign = 1
 
+[node name="chamomile" type="Label" parent="descriptions"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 0 )
+margin_left = 539.0
+margin_top = 116.0
+margin_right = 960.0
+margin_bottom = 228.0
+custom_fonts/font = SubResource( 3 )
+text = "Delicious tea!"
+align = 1
+valign = 1
+
 [node name="exit" type="TextureButton" parent="."]
 margin_right = 240.0
 margin_bottom = 135.0
 rect_scale = Vector2( 4, 4 )
-texture_click_mask = ExtResource( 12 )
+texture_click_mask = ExtResource( 14 )
+
+[node name="buy" type="TextureButton" parent="."]
+margin_top = 0.428009
+margin_right = 40.0
+margin_bottom = 40.428
+rect_scale = Vector2( 4, 4 )
+texture_hover = ExtResource( 15 )
+texture_click_mask = ExtResource( 16 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="buy" to="." method="_on_buy_pressed"]

@@ -25,6 +25,8 @@ func _process(delta):
 			plant_name = "rose"
 		("2"):
 			plant_name = "violet"
+		("3"):
+			plant_name = "chamomile"
 	
 	if(not(button_id == "-1")):
 		get_node("../names/" + plant_name).position = get_node("../names/" + plant_name).position.linear_interpolate(Vector2(740, 113), 0.1)

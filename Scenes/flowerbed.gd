@@ -4,6 +4,9 @@ extends Node2D
 func _ready():
 	set_plot_textures()
 	
+	for plot in get_children():
+		plot.connect("pressed", self, "plot_pressed", [plot.name.substr(4, plot.name.length() - 4)])
+	
 #warning-ignore:unused_argument
 func _process(delta):
 	if(Engine.editor_hint):
@@ -28,3 +31,6 @@ func set_plot_textures():
 		plot.texture_normal = normal
 		plot.texture_hover = hover
 		plot.texture_click_mask = bmp_mask
+		
+func plot_pressed(plot_id):
+	var seed_to_plant = get_node("../plant").current_plant_seed
