@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	set_plot_textures()
+	remember_plants()
 	
 	for plot in get_children():
 		plot.connect("pressed", self, "plot_pressed", [plot.name.substr(4, plot.name.length() - 4)])
@@ -37,14 +38,46 @@ func plot_pressed(plot_id):
 	
 	if(not(get_node("plot" + plot_id).has_node("sprite")) and not(seed_to_plant == "")):
 	
-		var sprite = Sprite.new()
-		sprite.name = "sprite"
-		sprite.texture = load("res://Graphics/Plants/" + seed_to_plant + ".png")
-		get_node("plot" + plot_id).add_child(sprite)
-		sprite.global_position = get_global_mouse_position() + Vector2(0, -5)
-		sprite.position = Vector2(int(sprite.position.x), int(sprite.position.y))
+		var plant_position = get_global_mouse_position() + Vector2(0, -5)
+		var plant = generate_plant_at(plot_id, seed_to_plant, plant_position)
+	
+		var data_to_store = {
+			"plant_name":seed_to_plant,
+			"time":money.times[seed_to_plant],
+			"position":plant.position
+		}
+		
+		data.set_value("Plots", plot_id, data_to_store)
 			
 	for i in get_tree().get_nodes_in_group("cursor_followers"):
 		i.queue_free()
 		
 	get_node("../plant").current_plant_seed = ""
+	
+func remember_plants():
+	for plant in data.get_section_keys("Plots"):
+		var plant_type = data.get_value("Plots", plant)["plant_name"]
+		var plant_position = data.get_value("Plots", plant)["position"]
+		var plant_time = data.get_value("Plots", plant)["time"]
+		
+		remember_plant(plant, plant_type, plant_position)
+		
+	
+func generate_plant_at(plot, plant_type, plant_position):
+	var sprite = Sprite.new()
+	sprite.name = "sprite"
+	sprite.texture = load("res://Graphics/Plants/" + plant_type + ".png")
+	get_node("plot" + plot).add_child(sprite)
+	sprite.global_position = plant_position
+	sprite.position = Vector2(int(sprite.position.x), int(sprite.position.y))
+	
+	return sprite
+
+func remember_plant(plot, plant_type, local_pos):
+	var sprite = Sprite.new()
+	sprite.name = "sprite"
+	sprite.texture = load("res://Graphics/Plants/" + plant_type + ".png")
+	get_node("plot" + plot).add_child(sprite)
+	sprite.position = local_pos
+	
+	return sprite

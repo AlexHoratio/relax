@@ -13,6 +13,7 @@ func get_value(section, key, default=null):
 	
 func set_value(section, key, value):
 	data.set_value(section, key, value)
+	save()
 	
 func get_section_keys(section):
 	return data.get_section_keys(section)

@@ -300,6 +300,7 @@ align = 1
 valign = 1
 
 [node name="stats" type="Node2D" parent="."]
+editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
 
 [node name="investment" type="Label" parent="stats"]

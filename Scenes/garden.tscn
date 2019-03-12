@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -76,6 +76,8 @@
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot32/over.png" type="Texture" id=74]
 [ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=75]
 [ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=76]
+[ext_resource path="res://Scripts/inspector.gd" type="Script" id=77]
+[ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=78]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -449,6 +451,7 @@ texture_hover = ExtResource( 4 )
 texture_click_mask = ExtResource( 5 )
 
 [node name="plant" type="Node2D" parent="."]
+editor/display_folded = true
 script = SubResource( 2 )
 
 [node name="plant" type="TextureButton" parent="plant"]
@@ -462,7 +465,6 @@ texture_hover = ExtResource( 8 )
 texture_click_mask = ExtResource( 9 )
 
 [node name="flowerbed" type="Node2D" parent="."]
-editor/display_folded = true
 scale = Vector2( 4, 4 )
 script = ExtResource( 10 )
 
@@ -799,6 +801,7 @@ anims/fade_in = SubResource( 35 )
 anims/fade_out = SubResource( 36 )
 
 [node name="money" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 873, 498 )
 script = SubResource( 38 )
 
@@ -814,6 +817,18 @@ text = "0"
 position = Vector2( -16, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 76 )
+
+[node name="inspector" type="Node2D" parent="."]
+script = ExtResource( 77 )
+
+[node name="names" type="Node2D" parent="inspector"]
+
+[node name="rose" type="Sprite" parent="inspector/names"]
+position = Vector2( 864, 204 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 78 )
+
+[node name="time" type="Node2D" parent="inspector"]
 
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
