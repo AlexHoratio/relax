@@ -34,3 +34,17 @@ func set_plot_textures():
 		
 func plot_pressed(plot_id):
 	var seed_to_plant = get_node("../plant").current_plant_seed
+	
+	if(not(get_node("plot" + plot_id).has_node("sprite"))):
+	
+		var sprite = Sprite.new()
+		sprite.name = "sprite"
+		sprite.texture = load("res://Graphics/Plants/" + seed_to_plant + ".png")
+		get_node("plot" + plot_id).add_child(sprite)
+		sprite.global_position = get_global_mouse_position() + Vector2(0, -5)
+		sprite.position = Vector2(int(sprite.position.x), int(sprite.position.y))
+			
+	for i in get_tree().get_nodes_in_group("cursor_followers"):
+		i.queue_free()
+		
+	get_node("../plant").current_plant_seed = ""

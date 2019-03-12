@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/Popups/plants.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Screens/plants.png" type="Texture" id=2]
@@ -13,9 +13,12 @@
 [ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=11]
 [ext_resource path="res://Graphics/Plants/BigName/chamomile.png" type="Texture" id=12]
 [ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=13]
-[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=14]
-[ext_resource path="res://Graphics/Buttons/Buy/normal.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Buttons/Buy/mask.bmp" type="BitMap" id=16]
+[ext_resource path="res://Graphics/Fonts/pixelfj8pt1/pixelFJ8pt1__.TTF" type="DynamicFontData" id=14]
+[ext_resource path="res://Graphics/Icons/money.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Icons/hourglass.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=17]
+[ext_resource path="res://Graphics/Buttons/Buy/normal.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Buttons/Buy/mask.bmp" type="BitMap" id=19]
 
 [sub_resource type="Animation" id=1]
 resource_name = "scroll_in"
@@ -52,6 +55,10 @@ tracks/0/keys = {
 size = 32
 font_data = ExtResource( 13 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 14 )
+
 [node name="plants" type="Node2D"]
 position = Vector2( 0, -426.428 )
 script = ExtResource( 1 )
@@ -71,7 +78,6 @@ editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="1" type="TextureButton" parent="buttons"]
-editor/display_folded = true
 margin_left = 28.0
 margin_top = 36.0
 margin_right = 45.0
@@ -84,11 +90,10 @@ texture_pressed = ExtResource( 5 )
 texture_disabled = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="buttons/1"]
-position = Vector2( 8.5, 12.25 )
+position = Vector2( 9, 9.857 )
 texture = ExtResource( 7 )
 
 [node name="2" type="TextureButton" parent="buttons"]
-editor/display_folded = true
 margin_left = 137.0
 margin_top = 36.0
 margin_right = 154.0
@@ -103,11 +108,10 @@ texture_disabled = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="buttons/2"]
 visible = false
-position = Vector2( 8.5, 9.857 )
+position = Vector2( 9, 9.857 )
 texture = ExtResource( 8 )
 
 [node name="3" type="TextureButton" parent="buttons"]
-editor/display_folded = true
 margin_left = 244.0
 margin_top = 36.0
 margin_right = 261.0
@@ -296,19 +300,54 @@ text = "Delicious tea!"
 align = 1
 valign = 1
 
+[node name="stats" type="Node2D" parent="."]
+
+[node name="investment" type="Label" parent="stats"]
+modulate = Color( 0.278431, 0.188235, 0.12549, 1 )
+margin_left = 570.0
+margin_top = 276.0
+margin_right = 736.0
+margin_bottom = 312.0
+custom_fonts/font = SubResource( 4 )
+text = "1"
+valign = 1
+
+[node name="reward" type="Label" parent="stats"]
+modulate = Color( 0.278431, 0.188235, 0.12549, 1 )
+margin_left = 570.0
+margin_top = 328.428
+margin_right = 736.0
+margin_bottom = 364.428
+custom_fonts/font = SubResource( 4 )
+text = "1"
+valign = 1
+
+[node name="icons" type="Node2D" parent="stats"]
+editor/display_folded = true
+
+[node name="money" type="Sprite" parent="stats/icons"]
+position = Vector2( 536, 316 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 15 )
+
+[node name="time" type="Sprite" parent="stats/icons"]
+position = Vector2( 754, 302 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 16 )
+
 [node name="exit" type="TextureButton" parent="."]
 margin_right = 240.0
 margin_bottom = 135.0
 rect_scale = Vector2( 4, 4 )
-texture_click_mask = ExtResource( 14 )
+texture_click_mask = ExtResource( 17 )
 
 [node name="buy" type="TextureButton" parent="."]
 margin_top = 0.428009
 margin_right = 40.0
 margin_bottom = 40.428
 rect_scale = Vector2( 4, 4 )
-texture_hover = ExtResource( 15 )
-texture_click_mask = ExtResource( 16 )
+texture_hover = ExtResource( 18 )
+texture_click_mask = ExtResource( 19 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

@@ -141,9 +141,14 @@ func cancel_quit(popup):
 	get_node(\"../screen_shadow/AnimationPlayer\").play(\"fade_out\")
 
 func assign_seed_to_pointer(plant_seed):
-	current_plant_seed = plant_seed
+	current_plant_seed = plant_seed[0]
 	
-	#set cursor?"
+	for i in get_tree().get_nodes_in_group(\"cursor_followers\"):
+		i.queue_free()
+		
+	var cursor_follower = load(\"res://Prefabs/cursor_follower.tscn\").instance()
+	cursor_follower.texture = load(\"res://Graphics/Plants/\" + current_plant_seed + \".png\")
+	get_node(\"..\").add_child(cursor_follower)"
 
 [sub_resource type="BitMap" id=3]
 data = {
@@ -424,6 +429,7 @@ texture_hover = ExtResource( 8 )
 texture_click_mask = ExtResource( 9 )
 
 [node name="flowerbed" type="Node2D" parent="."]
+editor/display_folded = true
 scale = Vector2( 4, 4 )
 script = ExtResource( 10 )
 
