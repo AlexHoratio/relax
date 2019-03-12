@@ -247,7 +247,6 @@ texture_pressed = ExtResource( 5 )
 texture_disabled = ExtResource( 6 )
 
 [node name="names" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="rose" type="Sprite" parent="names"]
 position = Vector2( 740, -26.5734 )
@@ -319,11 +318,20 @@ margin_top = 328.428
 margin_right = 736.0
 margin_bottom = 364.428
 custom_fonts/font = SubResource( 4 )
-text = "1"
+text = "10"
+valign = 1
+
+[node name="time" type="Label" parent="stats"]
+modulate = Color( 0.278431, 0.188235, 0.12549, 1 )
+margin_left = 738.0
+margin_top = 276.428
+margin_right = 922.0
+margin_bottom = 312.428
+custom_fonts/font = SubResource( 4 )
+text = "00:00:00"
 valign = 1
 
 [node name="icons" type="Node2D" parent="stats"]
-editor/display_folded = true
 
 [node name="money" type="Sprite" parent="stats/icons"]
 position = Vector2( 536, 316 )
@@ -331,7 +339,7 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 15 )
 
 [node name="time" type="Sprite" parent="stats/icons"]
-position = Vector2( 754, 302 )
+position = Vector2( 720, 290.428 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 16 )
 

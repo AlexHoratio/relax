@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 RESOURCES="*res://Scripts/Singletons/RESOURCES.gd"
 data="*res://Scripts/Singletons/data.gd"
+money="*res://Scripts/Singletons/money.gd"
 
 [display]
 

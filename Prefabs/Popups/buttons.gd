@@ -2,6 +2,7 @@ extends Node2D
 
 var plant_name = "rose"
 
+
 func _ready():
 	for button in get_children():
 		button.connect("pressed", self, "button_pressed", [button.name])
@@ -27,6 +28,16 @@ func _process(delta):
 			plant_name = "violet"
 		("3"):
 			plant_name = "chamomile"
+	
+	var time = str(money.times[plant_name])
+	if(not(time == "-1")):
+		get_node("../stats").modulate.a = lerp(get_node("../stats").modulate.a, 1, 0.1)
+		
+		get_node("../stats/investment").text = str(money.investments[plant_name])
+		get_node("../stats/reward").text = str(money.rewards[plant_name])
+		get_node("../stats/time").text = time #format this to 00:00:00
+	else:
+		get_node("../stats").modulate.a = lerp(get_node("../stats").modulate.a, 0, 0.1)
 	
 	if(not(button_id == "-1")):
 		get_node("../names/" + plant_name).position = get_node("../names/" + plant_name).position.linear_interpolate(Vector2(740, 113), 0.1)
