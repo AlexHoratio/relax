@@ -465,6 +465,7 @@ texture_hover = ExtResource( 8 )
 texture_click_mask = ExtResource( 9 )
 
 [node name="flowerbed" type="Node2D" parent="."]
+editor/display_folded = true
 scale = Vector2( 4, 4 )
 script = ExtResource( 10 )
 

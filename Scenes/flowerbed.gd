@@ -54,6 +54,8 @@ func plot_pressed(plot_id):
 		
 	get_node("../plant").current_plant_seed = ""
 	
+	get_node("../inspector").select_new_plot(plot_id)
+	
 func remember_plants():
 	for plant in data.get_section_keys("Plots"):
 		var plant_type = data.get_value("Plots", plant)["plant_name"]
