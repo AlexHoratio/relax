@@ -15,5 +15,10 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		queue_free()
 
 func _on_buy_pressed():
-	emit_signal("take_seed", [get_node("buttons").plant_name])
-	_on_exit_pressed()
+	if(int(data.get_money()) >= money.investments[get_node("buttons").plant_name]):
+		emit_signal("take_seed", [get_node("buttons").plant_name])
+		data.set_money(str(int(data.get_money()) - money.investments[get_node("buttons").plant_name]))
+		_on_exit_pressed()
+	else:
+		pass
+		#do an "access denied" effect idk

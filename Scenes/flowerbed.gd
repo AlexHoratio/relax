@@ -35,7 +35,7 @@ func set_plot_textures():
 func plot_pressed(plot_id):
 	var seed_to_plant = get_node("../plant").current_plant_seed
 	
-	if(not(get_node("plot" + plot_id).has_node("sprite"))):
+	if(not(get_node("plot" + plot_id).has_node("sprite")) and not(seed_to_plant == "")):
 	
 		var sprite = Sprite.new()
 		sprite.name = "sprite"

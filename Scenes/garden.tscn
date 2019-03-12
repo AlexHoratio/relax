@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=115 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -74,6 +74,8 @@
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot31/over.png" type="Texture" id=72]
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot32/normal.png" type="Texture" id=73]
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot32/over.png" type="Texture" id=74]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=75]
+[ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=76]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -393,6 +395,37 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 2 ]
 }
+
+[sub_resource type="GDScript" id=38]
+script/source = "extends Node2D
+	
+var px_per_letter = 6#adjust this
+var anchor_point = 879
+var txt_size = 0
+
+func _ready():
+	pass
+	
+func _process(delta):
+	get_node(\"Label\").text = data.get_money()
+	
+	var size_of_text = get_node(\"Label\").text.length()
+	
+	position.x = anchor_point - size_of_text*px_per_letter
+	
+#	if(Input.is_action_just_pressed(\"ui_up\")):
+#		txt_size += 1
+#	elif(Input.is_action_just_pressed(\"ui_down\")):
+#		txt_size -= 1
+#
+#	var text = \"\"
+#	for i in range(txt_size):
+#		text += \"1\"
+#	get_node(\"Label\").text = text"
+
+[sub_resource type="DynamicFont" id=37]
+size = 32
+font_data = ExtResource( 75 )
 
 [node name="garden" type="Node2D"]
 
@@ -764,6 +797,23 @@ color = Color( 0, 0, 0, 0.666667 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="screen_shadow"]
 anims/fade_in = SubResource( 35 )
 anims/fade_out = SubResource( 36 )
+
+[node name="money" type="Node2D" parent="."]
+position = Vector2( 873, 498 )
+script = SubResource( 38 )
+
+[node name="Label" type="Label" parent="money"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_top = -16.0
+margin_right = 104.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 37 )
+text = "0"
+
+[node name="Sprite" type="Sprite" parent="money"]
+position = Vector2( -16, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 76 )
 
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]

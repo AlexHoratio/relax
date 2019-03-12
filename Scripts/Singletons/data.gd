@@ -16,3 +16,11 @@ func set_value(section, key, value):
 	
 func get_section_keys(section):
 	return data.get_section_keys(section)
+	
+	
+func get_money():
+	return get_value("Money", "money", "10")
+	
+func set_money(value):
+	set_value("Money", "money", value)
+	save()
