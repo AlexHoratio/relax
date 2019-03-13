@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=2]
+[gd_scene load_steps=118 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -398,7 +398,7 @@ tracks/1/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="GDScript" id=38]
+[sub_resource type="GDScript" id=37]
 script/source = "extends Node2D
 	
 var px_per_letter = 6#adjust this
@@ -425,7 +425,11 @@ func _process(delta):
 #		text += \"1\"
 #	get_node(\"Label\").text = text"
 
-[sub_resource type="DynamicFont" id=37]
+[sub_resource type="DynamicFont" id=38]
+size = 32
+font_data = ExtResource( 75 )
+
+[sub_resource type="DynamicFont" id=39]
 size = 32
 font_data = ExtResource( 75 )
 
@@ -802,16 +806,15 @@ anims/fade_in = SubResource( 35 )
 anims/fade_out = SubResource( 36 )
 
 [node name="money" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 873, 498 )
-script = SubResource( 38 )
+script = SubResource( 37 )
 
 [node name="Label" type="Label" parent="money"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
 margin_top = -16.0
 margin_right = 104.0
 margin_bottom = 16.0
-custom_fonts/font = SubResource( 37 )
+custom_fonts/font = SubResource( 38 )
 text = "0"
 
 [node name="Sprite" type="Sprite" parent="money"]
@@ -830,6 +833,23 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 78 )
 
 [node name="time" type="Node2D" parent="inspector"]
+
+[node name="num1" type="Sprite" parent="inspector/time"]
+
+[node name="num2" type="Sprite" parent="inspector/time"]
+
+[node name="num3" type="Sprite" parent="inspector/time"]
+
+[node name="num4" type="Sprite" parent="inspector/time"]
+
+[node name="Label" type="Label" parent="inspector/time"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 823.0
+margin_top = 364.0
+margin_right = 915.0
+margin_bottom = 396.0
+custom_fonts/font = SubResource( 39 )
+text = "00:00"
 
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
