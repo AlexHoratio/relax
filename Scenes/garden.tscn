@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=127 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -78,6 +78,11 @@
 [ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=76]
 [ext_resource path="res://Scripts/inspector.gd" type="Script" id=77]
 [ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=78]
+[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=79]
+[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=80]
+[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=81]
+[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=82]
+[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=83]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -428,6 +433,170 @@ func _process(delta):
 [sub_resource type="DynamicFont" id=38]
 size = 32
 font_data = ExtResource( 75 )
+
+[sub_resource type="GDScript" id=40]
+script/source = "extends Sprite
+
+var numbers = {
+	\"0\":load(\"res://Graphics/Numbers/Column1/0.png\"),
+	\"1\":load(\"res://Graphics/Numbers/Column1/1.png\"),
+	\"2\":load(\"res://Graphics/Numbers/Column1/2.png\"),
+	\"3\":load(\"res://Graphics/Numbers/Column1/3.png\"),
+	\"4\":load(\"res://Graphics/Numbers/Column1/4.png\"),
+	\"5\":load(\"res://Graphics/Numbers/Column1/5.png\"),
+	\"6\":load(\"res://Graphics/Numbers/Column1/6.png\"),
+	\"7\":load(\"res://Graphics/Numbers/Column1/7.png\"),
+	\"8\":load(\"res://Graphics/Numbers/Column1/8.png\"),
+	\"9\":load(\"res://Graphics/Numbers/Column1/9.png\")
+}
+
+const MAX_SHAKE_X = 10
+const MAX_SHAKE_Y = 10
+
+var trauma = 0
+
+func _ready():
+	pass
+	
+func _process(delta):
+	
+	if(trauma > 0):
+		trauma -= delta
+	else:
+		trauma = 0
+		
+	offset = Vector2(MAX_SHAKE_X*(1 - randf()*2), MAX_SHAKE_Y*(1 - randf()*2)) * trauma*trauma
+
+func set_number(number : String):
+	if(not(texture == numbers[number])):
+		texture = numbers[number]
+	
+		trauma = 0.5
+	
+	#do a little shake here"
+
+[sub_resource type="GDScript" id=41]
+script/source = "extends Sprite
+
+var numbers = {
+	\"0\":load(\"res://Graphics/Numbers/Column2/0.png\"),
+	\"1\":load(\"res://Graphics/Numbers/Column2/1.png\"),
+	\"2\":load(\"res://Graphics/Numbers/Column2/2.png\"),
+	\"3\":load(\"res://Graphics/Numbers/Column2/3.png\"),
+	\"4\":load(\"res://Graphics/Numbers/Column2/4.png\"),
+	\"5\":load(\"res://Graphics/Numbers/Column2/5.png\"),
+	\"6\":load(\"res://Graphics/Numbers/Column2/6.png\"),
+	\"7\":load(\"res://Graphics/Numbers/Column2/7.png\"),
+	\"8\":load(\"res://Graphics/Numbers/Column2/8.png\"),
+	\"9\":load(\"res://Graphics/Numbers/Column2/9.png\")
+}
+
+const MAX_SHAKE_X = 10
+const MAX_SHAKE_Y = 10
+
+var trauma = 0
+
+func _ready():
+	pass
+	
+func _process(delta):
+	
+	if(trauma > 0):
+		trauma -= delta
+	else:
+		trauma = 0
+		
+	offset = Vector2(MAX_SHAKE_X*(1 - randf()*2), MAX_SHAKE_Y*(1 - randf()*2)) * trauma*trauma
+
+func set_number(number : String):
+	if(not(texture == numbers[number])):
+		texture = numbers[number]
+	
+		trauma = 0.5
+	
+	#do a little shake here"
+
+[sub_resource type="GDScript" id=42]
+script/source = "extends Sprite
+
+var numbers = {
+	\"0\":load(\"res://Graphics/Numbers/Column3/0.png\"),
+	\"1\":load(\"res://Graphics/Numbers/Column3/1.png\"),
+	\"2\":load(\"res://Graphics/Numbers/Column3/2.png\"),
+	\"3\":load(\"res://Graphics/Numbers/Column3/3.png\"),
+	\"4\":load(\"res://Graphics/Numbers/Column3/4.png\"),
+	\"5\":load(\"res://Graphics/Numbers/Column3/5.png\"),
+	\"6\":load(\"res://Graphics/Numbers/Column3/6.png\"),
+	\"7\":load(\"res://Graphics/Numbers/Column3/7.png\"),
+	\"8\":load(\"res://Graphics/Numbers/Column3/8.png\"),
+	\"9\":load(\"res://Graphics/Numbers/Column3/9.png\")
+}
+
+const MAX_SHAKE_X = 10
+const MAX_SHAKE_Y = 10
+
+var trauma = 0
+
+func _ready():
+	pass
+	
+func _process(delta):
+	
+	if(trauma > 0):
+		trauma -= delta
+	else:
+		trauma = 0
+		
+	offset = Vector2(MAX_SHAKE_X*(1 - randf()*2), MAX_SHAKE_Y*(1 - randf()*2)) * trauma*trauma
+
+func set_number(number : String):
+	if(not(texture == numbers[number])):
+		texture = numbers[number]
+	
+		trauma = 0.5
+	
+	#do a little shake here"
+
+[sub_resource type="GDScript" id=43]
+script/source = "extends Sprite
+
+var numbers = {
+	\"0\":load(\"res://Graphics/Numbers/Column4/0.png\"),
+	\"1\":load(\"res://Graphics/Numbers/Column4/1.png\"),
+	\"2\":load(\"res://Graphics/Numbers/Column4/2.png\"),
+	\"3\":load(\"res://Graphics/Numbers/Column4/3.png\"),
+	\"4\":load(\"res://Graphics/Numbers/Column4/4.png\"),
+	\"5\":load(\"res://Graphics/Numbers/Column4/5.png\"),
+	\"6\":load(\"res://Graphics/Numbers/Column4/6.png\"),
+	\"7\":load(\"res://Graphics/Numbers/Column4/7.png\"),
+	\"8\":load(\"res://Graphics/Numbers/Column4/8.png\"),
+	\"9\":load(\"res://Graphics/Numbers/Column4/9.png\")
+}
+
+const MAX_SHAKE_X = 10
+const MAX_SHAKE_Y = 10
+
+var trauma = 0
+
+func _ready():
+	pass
+	
+func _process(delta):
+	
+	if(trauma > 0):
+		trauma -= delta
+	else:
+		trauma = 0
+		
+	offset = Vector2(MAX_SHAKE_X*(1 - randf()*2), MAX_SHAKE_Y*(1 - randf()*2)) * trauma*trauma
+
+func set_number(number : String):
+	if(not(texture == numbers[number])):
+		texture = numbers[number]
+	
+		trauma = 0.5
+	
+	#do a little shake here"
 
 [sub_resource type="DynamicFont" id=39]
 size = 32
@@ -835,14 +1004,31 @@ texture = ExtResource( 78 )
 [node name="time" type="Node2D" parent="inspector"]
 
 [node name="num1" type="Sprite" parent="inspector/time"]
+position = Vector2( 942, 380 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 79 )
+script = SubResource( 40 )
 
 [node name="num2" type="Sprite" parent="inspector/time"]
+position = Vector2( 910, 378 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 80 )
+script = SubResource( 41 )
 
 [node name="num3" type="Sprite" parent="inspector/time"]
+position = Vector2( 864, 376 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 81 )
+script = SubResource( 42 )
 
 [node name="num4" type="Sprite" parent="inspector/time"]
+position = Vector2( 824, 380 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 82 )
+script = SubResource( 43 )
 
 [node name="Label" type="Label" parent="inspector/time"]
+visible = false
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
 margin_left = 823.0
 margin_top = 364.0
@@ -850,6 +1036,11 @@ margin_right = 915.0
 margin_bottom = 396.0
 custom_fonts/font = SubResource( 39 )
 text = "00:00"
+
+[node name="Sprite" type="Sprite" parent="inspector/time"]
+position = Vector2( 888, 378 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 83 )
 
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]

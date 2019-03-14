@@ -30,9 +30,14 @@ func _process(delta):
 		while(seconds.length() < 2):
 			seconds = "0" + seconds
 		
-		var formatted_time = minutes + ":" + seconds
+		var formatted_time = minutes + seconds
 		
-		get_node("time/Label").text = formatted_time
+		#get_node("time/Label").text = formatted_time
+		
+		get_node("time/num1").set_number(formatted_time[3])
+		get_node("time/num2").set_number(formatted_time[2])
+		get_node("time/num3").set_number(formatted_time[1])
+		get_node("time/num4").set_number(formatted_time[0])
 	
 func select_new_plot(plot_id):
 	if(selected_plot_id == plot_id):
