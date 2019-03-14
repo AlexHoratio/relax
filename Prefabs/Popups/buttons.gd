@@ -35,7 +35,31 @@ func _process(delta):
 		
 		get_node("../stats/investment").text = str(money.investments[plant_name])
 		get_node("../stats/reward").text = str(money.rewards[plant_name])
-		get_node("../stats/time").text = time #format this to 00:00:00
+		
+		var minutes = int(int(time) / 60)
+		var seconds = int(time) - (minutes*60)
+		
+		var hours
+		if(minutes > 59):
+			hours = int(minutes/60)
+			minutes -= hours*60
+		else:
+			hours = 0
+	
+		hours = str(hours)
+		minutes = str(minutes)
+		seconds = str(seconds)
+		
+		while(hours.length() < 2):
+			hours = "0" + hours
+			
+		while(minutes.length() < 2):
+			minutes = "0" + minutes
+			
+		while(seconds.length() < 2):
+			seconds = "0" + seconds
+			
+		get_node("../stats/time").text = hours + ":" + minutes + ":" + seconds #format this to 00:00:00
 	else:
 		get_node("../stats").modulate.a = lerp(get_node("../stats").modulate.a, 0, 0.1)
 	

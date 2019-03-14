@@ -264,7 +264,6 @@ scale = Vector2( 4, 3.99995 )
 texture = ExtResource( 12 )
 
 [node name="descriptions" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="rose" type="Label" parent="descriptions"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 0 )
