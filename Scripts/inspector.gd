@@ -13,20 +13,26 @@ func _process(delta):
 		else:
 			plant_name.modulate.a = lerp(plant_name.modulate.a, 0, 0.2)
 	
-	var unformatted_seconds = int(data.get_value("Plots", selected_plot_id, {"time":0})["time"])
-	
-	var minutes = str(unformatted_seconds / 60)
-	var seconds = str(unformatted_seconds - (int(minutes)*60))
-	
-	while(minutes.length() < 2):
-		minutes = "0" + minutes
+	var plot_data = data.get_value("Plots", selected_plot_id, {"time":"-1"})
+	if(plot_data["time"] == "-1"):
+		get_node("time").modulate.a = lerp(get_node("time").modulate.a, 0, 0.2)
 		
-	while(seconds.length() < 2):
-		seconds = "0" + seconds
-	
-	var formatted_time = minutes + ":" + seconds
-	
-	get_node("time/Label").text = formatted_time
+	else:
+		get_node("time").modulate.a = lerp(get_node("time").modulate.a, 1, 0.2)
+		var unformatted_seconds = int(plot_data["time"])
+		
+		var minutes = str(unformatted_seconds / 60)
+		var seconds = str(unformatted_seconds - (int(minutes)*60))
+		
+		while(minutes.length() < 2):
+			minutes = "0" + minutes
+			
+		while(seconds.length() < 2):
+			seconds = "0" + seconds
+		
+		var formatted_time = minutes + ":" + seconds
+		
+		get_node("time/Label").text = formatted_time
 	
 func select_new_plot(plot_id):
 	if(selected_plot_id == plot_id):
