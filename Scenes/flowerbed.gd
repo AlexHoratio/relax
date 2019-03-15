@@ -70,7 +70,7 @@ func remember_plants():
 	for plant in data.get_section_keys("Plots"):
 		var plant_type = data.get_value("Plots", plant)["plant_name"]
 		var plant_position = data.get_value("Plots", plant)["position"]
-		var plant_time = data.get_value("Plots", plant)["time"]
+		#var plant_time = data.get_value("Plots", plant)["time"]
 		
 		remember_plant(plant, plant_type, plant_position)
 		

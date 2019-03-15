@@ -38,6 +38,8 @@ func _process(delta):
 		get_node("time/num2").set_number(formatted_time[2])
 		get_node("time/num3").set_number(formatted_time[1])
 		get_node("time/num4").set_number(formatted_time[0])
+		
+	get_node("../buttons").current_plot_harvestable = (str(data.get_value("Plots", selected_plot_id, {"time":"-1"})["time"]) == "0")
 	
 func select_new_plot(plot_id):
 	if(selected_plot_id == plot_id):
@@ -55,5 +57,8 @@ func select_new_plot(plot_id):
 #		else:
 #			get_node("names/" + plant_name.name).modulate.a = 0
 		
+func deselect_plot(plot_id):
+	selected_plot_id = "-1"
+	selected_plant_name = ""
 	
-	get_node("../buttons").current_plot_harvestable = (str(data.get_value("Plots", plot_id, {"time":"-1"})["time"]) == "0")
+	
