@@ -7,6 +7,7 @@ func _ready():
 	generate_countdowns()
 	
 func generate_countdowns():
+	erase_existing_countdowns()
 	for plant in data.get_section_keys("Plots"):
 		var countdown = load("res://Scripts/countdown.gd").new()
 		
@@ -14,6 +15,12 @@ func generate_countdowns():
 		countdown.plot_id = plant
 
 		active_countdowns.append(countdown)
+		
+func erase_existing_countdowns():
+	for countdown in active_countdowns:
+		countdown.queue_free()
+		
+	active_countdowns = []
 		
 func _process(delta):
 	total += delta
@@ -30,3 +37,8 @@ func _process(delta):
 			plot_data["time"] = countdown.time_left
 			data.set_value("Plots", countdown.plot_id, plot_data)
 			
+func remove_countdown_by_id(plot_id):
+	for countdown in active_countdowns:
+		if(countdown.plot_id == plot_id):
+			countdown.queue_free()
+			active_countdowns.erase(countdown)

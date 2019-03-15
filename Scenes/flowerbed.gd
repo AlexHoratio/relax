@@ -1,6 +1,8 @@
 #tool
 extends Node2D
 
+var TIME = 0
+
 func _ready():
 	set_plot_textures()
 	remember_plants()
@@ -12,6 +14,12 @@ func _ready():
 func _process(delta):
 	if(Engine.editor_hint):
 		set_plot_textures()
+		
+	TIME += delta*2
+		
+	for plot in data.get_section_keys("Plots"):
+		if(str(data.get_value("Plots", plot, {"time":1})["time"]) == "0"):
+			get_node("plot" + str(plot)).get_node("sprite").position += Vector2(sin(TIME), cos(TIME))*delta
 	
 func set_plot_textures():
 	for plot in get_children():
@@ -56,6 +64,8 @@ func plot_pressed(plot_id):
 	
 	get_node("../inspector").select_new_plot(plot_id)
 	
+	countdown_manager.generate_countdowns()
+	
 func remember_plants():
 	for plant in data.get_section_keys("Plots"):
 		var plant_type = data.get_value("Plots", plant)["plant_name"]
@@ -83,3 +93,6 @@ func remember_plant(plot, plant_type, local_pos):
 	sprite.position = local_pos
 	
 	return sprite
+	
+func harvest_plant_at_plot(plot_id):
+	get_node("plot" + str(plot_id)).get_node("sprite").queue_free()

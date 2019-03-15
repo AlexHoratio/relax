@@ -2,6 +2,8 @@ extends Node
 
 var money = 0
 
+#remake all of these into strings some time? 
+#had issues with times
 var rewards = {
 	"":-1,
 	"rose":2,
@@ -17,13 +19,21 @@ var investments = {
 }
 
 var times = { #in seconds
-	"":-1,
-	"rose":10,
-	"violet":60,
-	"chamomile":600
+	"":"-1",
+	"rose":"10",
+	"violet":"60",
+	"chamomile":"600"
 }
 
 func _ready():
-	pass #load money from data singleton
+	money = data.get_value("Money", "money", "10")
+	#assigning this var money is kinda useless since most interfacing is done 
+	#direct to the configfile
+	
+func harvest_money(plot_id):
+	var plant_type = data.get_value("Plots", plot_id, {"plant_name":""})["plant_name"]
+	
+	money = str(int(money) + int(rewards[plant_type]))
+	data.set_value("Money", "money", money)
 	
 	

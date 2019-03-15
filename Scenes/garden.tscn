@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=2]
+[gd_scene load_steps=130 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -83,6 +83,9 @@
 [ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=81]
 [ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=82]
 [ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=83]
+[ext_resource path="res://Scripts/buttons.gd" type="Script" id=84]
+[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=85]
+[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=86]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -434,7 +437,7 @@ func _process(delta):
 size = 32
 font_data = ExtResource( 75 )
 
-[sub_resource type="GDScript" id=40]
+[sub_resource type="GDScript" id=39]
 script/source = "extends Sprite
 
 var numbers = {
@@ -475,7 +478,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=41]
+[sub_resource type="GDScript" id=40]
 script/source = "extends Sprite
 
 var numbers = {
@@ -516,7 +519,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=42]
+[sub_resource type="GDScript" id=41]
 script/source = "extends Sprite
 
 var numbers = {
@@ -557,7 +560,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=43]
+[sub_resource type="GDScript" id=42]
 script/source = "extends Sprite
 
 var numbers = {
@@ -598,7 +601,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="DynamicFont" id=39]
+[sub_resource type="DynamicFont" id=43]
 size = 32
 font_data = ExtResource( 75 )
 
@@ -975,6 +978,7 @@ anims/fade_in = SubResource( 35 )
 anims/fade_out = SubResource( 36 )
 
 [node name="money" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 873, 498 )
 script = SubResource( 37 )
 
@@ -992,6 +996,7 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 76 )
 
 [node name="inspector" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 77 )
 
 [node name="names" type="Node2D" parent="inspector"]
@@ -1007,25 +1012,25 @@ texture = ExtResource( 78 )
 position = Vector2( 942, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 79 )
-script = SubResource( 40 )
+script = SubResource( 39 )
 
 [node name="num2" type="Sprite" parent="inspector/time"]
 position = Vector2( 910, 378 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 80 )
-script = SubResource( 41 )
+script = SubResource( 40 )
 
 [node name="num3" type="Sprite" parent="inspector/time"]
 position = Vector2( 864, 376 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 81 )
-script = SubResource( 42 )
+script = SubResource( 41 )
 
 [node name="num4" type="Sprite" parent="inspector/time"]
 position = Vector2( 824, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 82 )
-script = SubResource( 43 )
+script = SubResource( 42 )
 
 [node name="Label" type="Label" parent="inspector/time"]
 visible = false
@@ -1034,7 +1039,7 @@ margin_left = 823.0
 margin_top = 364.0
 margin_right = 915.0
 margin_bottom = 396.0
-custom_fonts/font = SubResource( 39 )
+custom_fonts/font = SubResource( 43 )
 text = "00:00"
 
 [node name="Sprite" type="Sprite" parent="inspector/time"]
@@ -1042,9 +1047,23 @@ position = Vector2( 888, 378 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 83 )
 
+[node name="buttons" type="Node2D" parent="."]
+script = ExtResource( 84 )
+
+[node name="harvest" type="TextureButton" parent="buttons"]
+margin_left = 21.0
+margin_top = 209.0
+margin_right = 44.0
+margin_bottom = 229.0
+rect_scale = Vector2( 4, 4 )
+disabled = true
+texture_normal = ExtResource( 85 )
+texture_disabled = ExtResource( 86 )
+
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="quit/quit" to="quit" method="_on_quit_pressed"]
 [connection signal="mouse_entered" from="plant/plant" to="plant" method="_on_plant_mouse_entered"]
 [connection signal="mouse_exited" from="plant/plant" to="plant" method="_on_plant_mouse_exited"]
 [connection signal="pressed" from="plant/plant" to="plant" method="_on_plant_pressed"]
+[connection signal="pressed" from="buttons/harvest" to="buttons" method="_on_harvest_pressed"]

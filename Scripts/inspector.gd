@@ -47,10 +47,13 @@ func select_new_plot(plot_id):
 		selected_plot_id = plot_id
 		var plant = data.get_value("Plots", plot_id, {"plant_name":"", "position":Vector2(0, 0), "time":0})
 	
+		selected_plant_name = plant["plant_name"]
+		
 #	for plant_name in get_node("names").get_children():
 #		if(plant["plant_name"] == plant_name.name and not(selected_plot_id == "-1")):
 #			get_node("names/" + plant_name.name).modulate.a = 1#lerp(get_node("names/" + plant_name).modulate.a, 1, 0.1)
 #		else:
 #			get_node("names/" + plant_name.name).modulate.a = 0
-			
-		selected_plant_name = plant["plant_name"]
+		
+	
+	get_node("../buttons").current_plot_harvestable = (str(data.get_value("Plots", plot_id, {"time":"-1"})["time"]) == "0")
