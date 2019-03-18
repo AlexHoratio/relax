@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -78,15 +78,17 @@
 [ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=76]
 [ext_resource path="res://Scripts/inspector.gd" type="Script" id=77]
 [ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=78]
-[ext_resource path="res://Graphics/Plants/InspectorNames/sunflower.png" type="Texture" id=79]
-[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=80]
-[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=81]
-[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=82]
-[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=83]
-[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=84]
-[ext_resource path="res://Scripts/buttons.gd" type="Script" id=85]
-[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=86]
-[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=87]
+[ext_resource path="res://Graphics/Plants/InspectorNames/violet.png" type="Texture" id=79]
+[ext_resource path="res://Graphics/Plants/InspectorNames/chamomile.png" type="Texture" id=80]
+[ext_resource path="res://Graphics/Plants/InspectorNames/sunflower.png" type="Texture" id=81]
+[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=82]
+[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=83]
+[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=84]
+[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=85]
+[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=86]
+[ext_resource path="res://Scripts/buttons.gd" type="Script" id=87]
+[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=88]
+[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=89]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -1007,11 +1009,23 @@ position = Vector2( 864, 204 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 78 )
 
+[node name="violet" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 873, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 79 )
+
+[node name="chamomile" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 862, 244 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 80 )
+
 [node name="sunflower" type="Sprite" parent="inspector/names"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 870, 244 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 79 )
+texture = ExtResource( 81 )
 
 [node name="time" type="Node2D" parent="inspector"]
 modulate = Color( 1, 1, 1, 0 )
@@ -1019,25 +1033,25 @@ modulate = Color( 1, 1, 1, 0 )
 [node name="num1" type="Sprite" parent="inspector/time"]
 position = Vector2( 942, 380 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 80 )
+texture = ExtResource( 82 )
 script = SubResource( 39 )
 
 [node name="num2" type="Sprite" parent="inspector/time"]
 position = Vector2( 910, 378 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 81 )
+texture = ExtResource( 83 )
 script = SubResource( 40 )
 
 [node name="num3" type="Sprite" parent="inspector/time"]
 position = Vector2( 864, 376 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 82 )
+texture = ExtResource( 84 )
 script = SubResource( 41 )
 
 [node name="num4" type="Sprite" parent="inspector/time"]
 position = Vector2( 824, 380 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 83 )
+texture = ExtResource( 85 )
 script = SubResource( 42 )
 
 [node name="Label" type="Label" parent="inspector/time"]
@@ -1053,10 +1067,10 @@ text = "00:00"
 [node name="Sprite" type="Sprite" parent="inspector/time"]
 position = Vector2( 888, 378 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 84 )
+texture = ExtResource( 86 )
 
 [node name="buttons" type="Node2D" parent="."]
-script = ExtResource( 85 )
+script = ExtResource( 87 )
 
 [node name="harvest" type="TextureButton" parent="buttons"]
 margin_left = 21.0
@@ -1065,8 +1079,8 @@ margin_right = 44.0
 margin_bottom = 229.0
 rect_scale = Vector2( 4, 4 )
 disabled = true
-texture_normal = ExtResource( 86 )
-texture_disabled = ExtResource( 87 )
+texture_normal = ExtResource( 88 )
+texture_disabled = ExtResource( 89 )
 
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
