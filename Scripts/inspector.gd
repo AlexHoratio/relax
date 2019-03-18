@@ -21,16 +21,11 @@ func _process(delta):
 		get_node("time").modulate.a = lerp(get_node("time").modulate.a, 1, 0.2)
 		var unformatted_seconds = int(plot_data["time"])
 		
-		var minutes = str(unformatted_seconds / 60)
-		var seconds = str(unformatted_seconds - (int(minutes)*60))
-		
-		while(minutes.length() < 2):
-			minutes = "0" + minutes
-			
-		while(seconds.length() < 2):
-			seconds = "0" + seconds
-		
-		var formatted_time = minutes + seconds
+		var formatted_time
+		if(unformatted_seconds >= 3600):
+			formatted_time = get_hours_minutes_time(unformatted_seconds)
+		else:
+			formatted_time = get_minutes_seconds_time(unformatted_seconds)
 		
 		#get_node("time/Label").text = formatted_time
 		
@@ -40,6 +35,37 @@ func _process(delta):
 		get_node("time/num4").set_number(formatted_time[0])
 		
 	get_node("../buttons").current_plot_harvestable = (str(data.get_value("Plots", selected_plot_id, {"time":"-1"})["time"]) == "0")
+	
+func get_minutes_seconds_time(unformatted_seconds):
+	
+	var minutes = str(unformatted_seconds / 60)
+	var seconds = str(unformatted_seconds - (int(minutes)*60))
+		
+	while(minutes.length() < 2):
+		minutes = "0" + minutes
+			
+	while(seconds.length() < 2):
+		seconds = "0" + seconds
+		
+	var formatted_time = minutes + seconds
+	
+	return formatted_time
+	
+func get_hours_minutes_time(unformatted_seconds):
+	
+	var hours = str(unformatted_seconds/(60*60))
+	var minutes = str((unformatted_seconds / 60) - (int(hours)*60))
+	#var seconds = str(unformatted_seconds - (int(minutes)*60))
+			
+	while(hours.length() < 2):
+		hours = "0" + hours
+		
+	while(minutes.length() < 2):
+		minutes = "0" + minutes
+		
+	var formatted_time = hours + minutes
+	
+	return formatted_time
 	
 func select_new_plot(plot_id):
 	if(selected_plot_id == plot_id):
