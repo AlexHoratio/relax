@@ -8,21 +8,24 @@ var rewards = {
 	"":-1,
 	"rose":2,
 	"violet":10,
-	"chamomile":50
+	"chamomile":50,
+	"sunflower":100
 }
 
 var investments = {
 	"":-1,
 	"rose":1,
 	"violet":5,
-	"chamomile":25
+	"chamomile":25,
+	"sunflower":50
 }
 
 var times = { #in seconds
 	"":"-1",
 	"rose":"10",
 	"violet":"60",
-	"chamomile":"600"
+	"chamomile":"600",
+	"sunflower":"1200"
 }
 
 func _ready():
