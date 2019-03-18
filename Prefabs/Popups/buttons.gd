@@ -30,6 +30,8 @@ func _process(delta):
 			plant_name = "chamomile"
 		("4"):
 			plant_name = "sunflower"
+		("5"):
+			plant_name = "rosebush"
 	
 	var time = str(money.times[plant_name])
 	if(not(time == "-1")):

@@ -22,7 +22,7 @@ func get_section_keys(section):
 func erase_value(section_to_erase, key_to_erase):
 	var new_data = ConfigFile.new()
 	
-	for section in ["Plots", "Money"]:
+	for section in ["Plots", "Money", "PlantUnlocks"]:
 		for key in get_section_keys(section):
 			if(not(key == key_to_erase and section == section_to_erase)):
 				new_data.set_value(section, key, data.get_value(section, key))
