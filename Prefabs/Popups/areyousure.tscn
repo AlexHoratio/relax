@@ -9,7 +9,7 @@
 [ext_resource path="res://Graphics/Buttons/No/down.png" type="Texture" id=7]
 [ext_resource path="res://Graphics/Buttons/No/over.png" type="Texture" id=8]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
 var mouse_entered = false
@@ -27,9 +27,10 @@ func _on_yes_mouse_exited():
 	mouse_entered = false
 
 func _on_yes_pressed():
+	data._notification(MainLoop.NOTIFICATION_WM_QUIT_REQUEST)
 	get_tree().quit()"
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=2]
 script/source = "extends Node2D
 
 var mouse_entered = false
@@ -50,8 +51,7 @@ func _on_no_pressed():
 	get_node(\"../..\").emit_signal(\"cancel\")
 "
 
-[sub_resource type="Animation" id=1]
-resource_name = "appear"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:scale")
 tracks/0/interp = 1
@@ -89,7 +89,7 @@ scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 2 )
 
 [node name="yes" type="Node2D" parent="Sprite"]
-script = SubResource( 2 )
+script = SubResource( 1 )
 
 [node name="yes" type="TextureButton" parent="Sprite/yes"]
 margin_left = -55.0
@@ -101,7 +101,7 @@ texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
 
 [node name="no" type="Node2D" parent="Sprite"]
-script = SubResource( 3 )
+script = SubResource( 2 )
 
 [node name="no" type="TextureButton" parent="Sprite/no"]
 margin_left = -5.0
@@ -114,7 +114,7 @@ texture_hover = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "appear"
-anims/appear = SubResource( 1 )
+anims/appear = SubResource( 3 )
 anims/disappear = SubResource( 4 )
 
 [connection signal="mouse_entered" from="Sprite/yes/yes" to="Sprite/yes" method="_on_yes_mouse_entered"]

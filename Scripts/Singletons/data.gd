@@ -22,7 +22,7 @@ func get_section_keys(section):
 func erase_value(section_to_erase, key_to_erase):
 	var new_data = ConfigFile.new()
 	
-	for section in ["Plots", "Money", "PlantUnlocks"]:
+	for section in ["Plots", "Money", "PlantUnlocks", "Data"]:
 		for key in get_section_keys(section):
 			if(not(key == key_to_erase and section == section_to_erase)):
 				new_data.set_value(section, key, data.get_value(section, key))
@@ -37,3 +37,7 @@ func set_money(value):
 	set_value("Money", "money", value)
 	save()
 	
+func _notification(what):
+	if(what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST):
+		data.set_value("Data", "last_login_time", OS.get_unix_time())
+		save()
