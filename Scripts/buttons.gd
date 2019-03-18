@@ -2,6 +2,7 @@ extends Node2D
 
 signal harvested_plant
 
+var destination = ""
 var current_plot_harvestable = false
 
 func _ready():
@@ -21,3 +22,10 @@ func _on_harvest_pressed():
 
 func _process(delta):
 	get_node("harvest").disabled = not(current_plot_harvestable)
+
+func _on_relax_pressed():
+	destination = "res://Scenes/relax.tscn"
+	get_node("../CanvasLayer/ColorRect/AnimationPlayer").play("fade_out")
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	get_tree().change_scene(destination)

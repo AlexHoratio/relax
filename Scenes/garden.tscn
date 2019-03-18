@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -74,23 +74,26 @@
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot31/over.png" type="Texture" id=72]
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot32/normal.png" type="Texture" id=73]
 [ext_resource path="res://Graphics/Flowerbed/Plots/plot32/over.png" type="Texture" id=74]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=75]
-[ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=76]
-[ext_resource path="res://Scripts/inspector.gd" type="Script" id=77]
-[ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=78]
-[ext_resource path="res://Graphics/Plants/InspectorNames/violet.png" type="Texture" id=79]
-[ext_resource path="res://Graphics/Plants/InspectorNames/chamomile.png" type="Texture" id=80]
-[ext_resource path="res://Graphics/Plants/InspectorNames/sunflower.png" type="Texture" id=81]
-[ext_resource path="res://Graphics/Plants/InspectorNames/rosebush.png" type="Texture" id=82]
-[ext_resource path="res://Graphics/Plants/InspectorNames/glooptree.png" type="Texture" id=83]
-[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=84]
-[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=85]
-[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=86]
-[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=87]
-[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=88]
-[ext_resource path="res://Scripts/buttons.gd" type="Script" id=89]
-[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=90]
-[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=91]
+[ext_resource path="res://Scripts/buttons.gd" type="Script" id=75]
+[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=76]
+[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=77]
+[ext_resource path="res://Graphics/Buttons/Relax/normal.png" type="Texture" id=78]
+[ext_resource path="res://Graphics/Buttons/Relax/down.png" type="Texture" id=79]
+[ext_resource path="res://Graphics/Buttons/Relax/over.png" type="Texture" id=80]
+[ext_resource path="res://Scripts/inspector.gd" type="Script" id=81]
+[ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=82]
+[ext_resource path="res://Graphics/Plants/InspectorNames/violet.png" type="Texture" id=83]
+[ext_resource path="res://Graphics/Plants/InspectorNames/chamomile.png" type="Texture" id=84]
+[ext_resource path="res://Graphics/Plants/InspectorNames/sunflower.png" type="Texture" id=85]
+[ext_resource path="res://Graphics/Plants/InspectorNames/rosebush.png" type="Texture" id=86]
+[ext_resource path="res://Graphics/Plants/InspectorNames/glooptree.png" type="Texture" id=87]
+[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=88]
+[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=89]
+[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=90]
+[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=91]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=92]
+[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=93]
+[ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=94]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -359,89 +362,6 @@ data = {
 "size": Vector2( 20, 20 )
 }
 
-[sub_resource type="Animation" id=35]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 0.378929, 0.120742 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:mouse_filter")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-
-[sub_resource type="Animation" id=36]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 0.25, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:mouse_filter")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 2 ]
-}
-
-[sub_resource type="GDScript" id=37]
-script/source = "extends Node2D
-	
-var px_per_letter = 6#adjust this
-var anchor_point = 879
-var txt_size = 0
-
-func _ready():
-	pass
-	
-func _process(delta):
-	get_node(\"Label\").text = data.get_money()
-	
-	var size_of_text = get_node(\"Label\").text.length()
-	
-	position.x = anchor_point - size_of_text*px_per_letter
-	
-#	if(Input.is_action_just_pressed(\"ui_up\")):
-#		txt_size += 1
-#	elif(Input.is_action_just_pressed(\"ui_down\")):
-#		txt_size -= 1
-#
-#	var text = \"\"
-#	for i in range(txt_size):
-#		text += \"1\"
-#	get_node(\"Label\").text = text"
-
-[sub_resource type="DynamicFont" id=38]
-size = 32
-font_data = ExtResource( 75 )
-
 [sub_resource type="GDScript" id=39]
 script/source = "extends Sprite
 
@@ -608,7 +528,105 @@ func set_number(number : String):
 
 [sub_resource type="DynamicFont" id=43]
 size = 32
-font_data = ExtResource( 75 )
+font_data = ExtResource( 92 )
+
+[sub_resource type="Animation" id=35]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 0.378929, 0.120742 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=36]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 0.25, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="GDScript" id=37]
+script/source = "extends Node2D
+	
+var px_per_letter = 6#adjust this
+var anchor_point = 879
+var txt_size = 0
+
+func _ready():
+	pass
+	
+func _process(delta):
+	get_node(\"Label\").text = data.get_money()
+	
+	var size_of_text = get_node(\"Label\").text.length()
+	
+	position.x = anchor_point - size_of_text*px_per_letter
+	
+#	if(Input.is_action_just_pressed(\"ui_up\")):
+#		txt_size += 1
+#	elif(Input.is_action_just_pressed(\"ui_down\")):
+#		txt_size -= 1
+#
+#	var text = \"\"
+#	for i in range(txt_size):
+#		text += \"1\"
+#	get_node(\"Label\").text = text"
+
+[sub_resource type="DynamicFont" id=38]
+size = 32
+font_data = ExtResource( 92 )
+
+[sub_resource type="Animation" id=44]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.378929, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="garden" type="Node2D"]
 
@@ -970,6 +988,114 @@ texture_normal = ExtResource( 73 )
 texture_hover = ExtResource( 74 )
 texture_click_mask = SubResource( 34 )
 
+[node name="buttons" type="Node2D" parent="."]
+editor/display_folded = true
+script = ExtResource( 75 )
+
+[node name="harvest" type="TextureButton" parent="buttons"]
+margin_left = 21.0
+margin_top = 209.0
+margin_right = 44.0
+margin_bottom = 229.0
+rect_scale = Vector2( 4, 4 )
+disabled = true
+texture_normal = ExtResource( 76 )
+texture_disabled = ExtResource( 77 )
+
+[node name="relax" type="TextureButton" parent="buttons"]
+margin_left = 184.0
+margin_top = 448.0
+margin_right = 308.0
+margin_bottom = 467.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 78 )
+texture_pressed = ExtResource( 79 )
+texture_hover = ExtResource( 80 )
+
+[node name="inspector" type="Node2D" parent="."]
+editor/display_folded = true
+script = ExtResource( 81 )
+
+[node name="names" type="Node2D" parent="inspector"]
+
+[node name="rose" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 864, 204 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 82 )
+
+[node name="violet" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 873, 227 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 83 )
+
+[node name="chamomile" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 862, 244 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 84 )
+
+[node name="sunflower" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 870, 244 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 85 )
+
+[node name="rosebush" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 861, 234 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 86 )
+
+[node name="glooptree" type="Sprite" parent="inspector/names"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 852, 260 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 87 )
+
+[node name="time" type="Node2D" parent="inspector"]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="num1" type="Sprite" parent="inspector/time"]
+position = Vector2( 942, 380 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 88 )
+script = SubResource( 39 )
+
+[node name="num2" type="Sprite" parent="inspector/time"]
+position = Vector2( 910, 378 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 89 )
+script = SubResource( 40 )
+
+[node name="num3" type="Sprite" parent="inspector/time"]
+position = Vector2( 864, 376 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 90 )
+script = SubResource( 41 )
+
+[node name="num4" type="Sprite" parent="inspector/time"]
+position = Vector2( 824, 380 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 91 )
+script = SubResource( 42 )
+
+[node name="Label" type="Label" parent="inspector/time"]
+visible = false
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 823.0
+margin_top = 364.0
+margin_right = 915.0
+margin_bottom = 396.0
+custom_fonts/font = SubResource( 43 )
+text = "00:00"
+
+[node name="Sprite" type="Sprite" parent="inspector/time"]
+position = Vector2( 888, 378 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 93 )
+
 [node name="screen_shadow" type="ColorRect" parent="."]
 editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
@@ -998,103 +1124,19 @@ text = "0"
 [node name="Sprite" type="Sprite" parent="money"]
 position = Vector2( -16, 0 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 76 )
+texture = ExtResource( 94 )
 
-[node name="inspector" type="Node2D" parent="."]
-script = ExtResource( 77 )
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="names" type="Node2D" parent="inspector"]
-
-[node name="rose" type="Sprite" parent="inspector/names"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 864, 204 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 78 )
+margin_right = 960.0
+margin_bottom = 540.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
 
-[node name="violet" type="Sprite" parent="inspector/names"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 873, 227 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 79 )
-
-[node name="chamomile" type="Sprite" parent="inspector/names"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 862, 244 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 80 )
-
-[node name="sunflower" type="Sprite" parent="inspector/names"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 870, 244 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 81 )
-
-[node name="rosebush" type="Sprite" parent="inspector/names"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 861, 234 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 82 )
-
-[node name="glooptree" type="Sprite" parent="inspector/names"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 852, 260 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 83 )
-
-[node name="time" type="Node2D" parent="inspector"]
-modulate = Color( 1, 1, 1, 0 )
-
-[node name="num1" type="Sprite" parent="inspector/time"]
-position = Vector2( 942, 380 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 84 )
-script = SubResource( 39 )
-
-[node name="num2" type="Sprite" parent="inspector/time"]
-position = Vector2( 910, 378 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 85 )
-script = SubResource( 40 )
-
-[node name="num3" type="Sprite" parent="inspector/time"]
-position = Vector2( 864, 376 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 86 )
-script = SubResource( 41 )
-
-[node name="num4" type="Sprite" parent="inspector/time"]
-position = Vector2( 824, 380 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 87 )
-script = SubResource( 42 )
-
-[node name="Label" type="Label" parent="inspector/time"]
-visible = false
-modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
-margin_left = 823.0
-margin_top = 364.0
-margin_right = 915.0
-margin_bottom = 396.0
-custom_fonts/font = SubResource( 43 )
-text = "00:00"
-
-[node name="Sprite" type="Sprite" parent="inspector/time"]
-position = Vector2( 888, 378 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 88 )
-
-[node name="buttons" type="Node2D" parent="."]
-script = ExtResource( 89 )
-
-[node name="harvest" type="TextureButton" parent="buttons"]
-margin_left = 21.0
-margin_top = 209.0
-margin_right = 44.0
-margin_bottom = 229.0
-rect_scale = Vector2( 4, 4 )
-disabled = true
-texture_normal = ExtResource( 90 )
-texture_disabled = ExtResource( 91 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ColorRect"]
+anims/fade_out = SubResource( 44 )
 
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
@@ -1103,3 +1145,5 @@ texture_disabled = ExtResource( 91 )
 [connection signal="mouse_exited" from="plant/plant" to="plant" method="_on_plant_mouse_exited"]
 [connection signal="pressed" from="plant/plant" to="plant" method="_on_plant_pressed"]
 [connection signal="pressed" from="buttons/harvest" to="buttons" method="_on_harvest_pressed"]
+[connection signal="pressed" from="buttons/relax" to="buttons" method="_on_relax_pressed"]
+[connection signal="animation_finished" from="CanvasLayer/ColorRect/AnimationPlayer" to="buttons" method="_on_AnimationPlayer_animation_finished"]
