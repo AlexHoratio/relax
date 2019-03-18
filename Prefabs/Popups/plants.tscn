@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scripts/Popups/plants.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Screens/plants.png" type="Texture" id=2]
@@ -11,18 +11,20 @@
 [ext_resource path="res://Graphics/Plants/chamomile.png" type="Texture" id=9]
 [ext_resource path="res://Graphics/Plants/sunflower.png" type="Texture" id=10]
 [ext_resource path="res://Graphics/Plants/rosebush.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=13]
-[ext_resource path="res://Graphics/Plants/BigName/chamomile.png" type="Texture" id=14]
-[ext_resource path="res://Graphics/Plants/BigName/sunflower.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Plants/BigName/rosebush.png" type="Texture" id=16]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://Graphics/Fonts/pixelfj8pt1/pixelFJ8pt1__.TTF" type="DynamicFontData" id=18]
-[ext_resource path="res://Graphics/Icons/money.png" type="Texture" id=19]
-[ext_resource path="res://Graphics/Icons/hourglass.png" type="Texture" id=20]
-[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=21]
-[ext_resource path="res://Graphics/Buttons/Buy/normal.png" type="Texture" id=22]
-[ext_resource path="res://Graphics/Buttons/Buy/mask.bmp" type="BitMap" id=23]
+[ext_resource path="res://Graphics/Plants/glooptree.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Plants/BigName/rose.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Plants/BigName/violet.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Plants/BigName/chamomile.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Plants/BigName/sunflower.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Plants/BigName/rosebush.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Plants/BigName/glooptree.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://Graphics/Fonts/pixelfj8pt1/pixelFJ8pt1__.TTF" type="DynamicFontData" id=20]
+[ext_resource path="res://Graphics/Icons/money.png" type="Texture" id=21]
+[ext_resource path="res://Graphics/Icons/hourglass.png" type="Texture" id=22]
+[ext_resource path="res://Graphics/Screens/plants_mask.bmp" type="BitMap" id=23]
+[ext_resource path="res://Graphics/Buttons/Buy/normal.png" type="Texture" id=24]
+[ext_resource path="res://Graphics/Buttons/Buy/mask.bmp" type="BitMap" id=25]
 
 [sub_resource type="Animation" id=1]
 resource_name = "scroll_in"
@@ -57,11 +59,11 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
-font_data = ExtResource( 17 )
+font_data = ExtResource( 19 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 32
-font_data = ExtResource( 18 )
+font_data = ExtResource( 20 )
 
 [node name="plants" type="Node2D"]
 position = Vector2( 0, -426.428 )
@@ -97,6 +99,7 @@ position = Vector2( 9, 9.857 )
 texture = ExtResource( 7 )
 
 [node name="2" type="TextureButton" parent="buttons"]
+editor/display_folded = true
 margin_left = 137.0
 margin_top = 36.0
 margin_right = 154.0
@@ -115,6 +118,7 @@ position = Vector2( 9, 9.857 )
 texture = ExtResource( 8 )
 
 [node name="3" type="TextureButton" parent="buttons"]
+editor/display_folded = true
 margin_left = 244.0
 margin_top = 36.0
 margin_right = 261.0
@@ -133,6 +137,7 @@ position = Vector2( 9, 10 )
 texture = ExtResource( 9 )
 
 [node name="4" type="TextureButton" parent="buttons"]
+editor/display_folded = true
 margin_left = 352.0
 margin_top = 36.0
 margin_right = 369.0
@@ -151,6 +156,7 @@ position = Vector2( 9, 10.107 )
 texture = ExtResource( 10 )
 
 [node name="5" type="TextureButton" parent="buttons"]
+editor/display_folded = true
 margin_left = 28.0
 margin_top = 136.0
 margin_right = 45.0
@@ -180,6 +186,11 @@ action_mode = 0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 texture_disabled = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="buttons/6"]
+visible = false
+position = Vector2( 8.5, 8.857 )
+texture = ExtResource( 12 )
 
 [node name="7" type="TextureButton" parent="buttons"]
 margin_left = 244.0
@@ -264,27 +275,32 @@ texture_disabled = ExtResource( 6 )
 [node name="rose" type="Sprite" parent="names"]
 position = Vector2( 740, -26.5734 )
 scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="violet" type="Sprite" parent="names"]
 position = Vector2( 740, -26.5734 )
 scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="chamomile" type="Sprite" parent="names"]
 position = Vector2( 740, -26.5734 )
 scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="sunflower" type="Sprite" parent="names"]
 position = Vector2( 740, -26.5734 )
 scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 
 [node name="rosebush" type="Sprite" parent="names"]
 position = Vector2( 740, -26.5734 )
 scale = Vector2( 4, 3.99995 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
+
+[node name="glooptree" type="Sprite" parent="names"]
+position = Vector2( 740, -26.5734 )
+scale = Vector2( 4, 3.99995 )
+texture = ExtResource( 18 )
 
 [node name="descriptions" type="Node2D" parent="."]
 
@@ -343,6 +359,17 @@ text = "Don't touch!"
 align = 1
 valign = 1
 
+[node name="glooptree" type="Label" parent="descriptions"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 0 )
+margin_left = 539.0
+margin_top = 116.0
+margin_right = 960.0
+margin_bottom = 228.0
+custom_fonts/font = SubResource( 3 )
+text = "Seems familiar..."
+align = 1
+valign = 1
+
 [node name="stats" type="Node2D" parent="."]
 editor/display_folded = true
 modulate = Color( 1, 1, 1, 0 )
@@ -382,26 +409,26 @@ valign = 1
 [node name="money" type="Sprite" parent="stats/icons"]
 position = Vector2( 536, 316 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 19 )
+texture = ExtResource( 21 )
 
 [node name="time" type="Sprite" parent="stats/icons"]
 position = Vector2( 720, 290.428 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 20 )
+texture = ExtResource( 22 )
 
 [node name="exit" type="TextureButton" parent="."]
 margin_right = 240.0
 margin_bottom = 135.0
 rect_scale = Vector2( 4, 4 )
-texture_click_mask = ExtResource( 21 )
+texture_click_mask = ExtResource( 23 )
 
 [node name="buy" type="TextureButton" parent="."]
 margin_top = 0.428009
 margin_right = 40.0
 margin_bottom = 40.428
 rect_scale = Vector2( 4, 4 )
-texture_hover = ExtResource( 22 )
-texture_click_mask = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_click_mask = ExtResource( 25 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

@@ -11,6 +11,7 @@ var rewards = {
 	"chamomile":50,
 	"sunflower":100,
 	"rosebush":200,
+	"glooptree":400,
 }
 
 var investments = {
@@ -20,6 +21,7 @@ var investments = {
 	"chamomile":25,
 	"sunflower":50,
 	"rosebush":100,
+	"glooptree":150,
 }
 
 var times = { #in seconds
@@ -29,6 +31,7 @@ var times = { #in seconds
 	"chamomile":"600",
 	"sunflower":"1200",
 	"rosebush":"2400",
+	"glooptree":"4800",
 }
 
 func _ready():
