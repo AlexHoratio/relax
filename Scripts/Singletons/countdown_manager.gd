@@ -15,7 +15,8 @@ func generate_countdowns():
 	erase_existing_countdowns()
 	for plant in data.get_section_keys("Plots"):
 		var countdown = load("res://Scripts/countdown.gd").new()
-		countdown.time_left = data.get_value("Plots", plant)["time"]
+		print(data.get_value("Plots", plant)["time"])
+		countdown.time_left = max(float(data.get_value("Plots", plant)["time"]), 0.0)
 		
 		if(just_logged_in):
 			countdown.time_left = str(int(countdown.time_left) - time_difference)
