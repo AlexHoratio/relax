@@ -15,13 +15,12 @@ func generate_countdowns():
 	erase_existing_countdowns()
 	for plant in data.get_section_keys("Plots"):
 		var countdown = load("res://Scripts/countdown.gd").new()
-		print(data.get_value("Plots", plant)["time"])
-		countdown.time_left = max(float(data.get_value("Plots", plant)["time"]), 0.0)
+		countdown.time_left = str(max(float(data.get_value("Plots", plant)["time"]), 0.0))
 		
 		if(just_logged_in):
 			countdown.time_left = str(int(countdown.time_left) - time_difference)
 			var data_overwrite = data.get_value("Plots", plant)
-			data_overwrite["time"] = countdown.time_left
+			data_overwrite["time"] = str(max(float(countdown.time_left), 0.0))
 			data.set_value("Plots", plant, data_overwrite)
 			
 		countdown.plot_id = plant

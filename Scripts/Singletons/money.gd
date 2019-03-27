@@ -42,7 +42,7 @@ func _ready():
 func harvest_money(plot_id):
 	var plant_type = data.get_value("Plots", plot_id, {"plant_name":""})["plant_name"]
 	
-	money = str(int(money) + int(rewards[plant_type]))
+	money = str(int(data.get_value("Money", "money", money)) + int(rewards[plant_type]))
 	data.set_value("Money", "money", money)
 	
 	
