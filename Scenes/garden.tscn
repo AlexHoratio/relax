@@ -362,7 +362,7 @@ data = {
 "size": Vector2( 20, 20 )
 }
 
-[sub_resource type="GDScript" id=39]
+[sub_resource type="GDScript" id=35]
 script/source = "extends Sprite
 
 var numbers = {
@@ -403,7 +403,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=40]
+[sub_resource type="GDScript" id=36]
 script/source = "extends Sprite
 
 var numbers = {
@@ -444,7 +444,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=41]
+[sub_resource type="GDScript" id=37]
 script/source = "extends Sprite
 
 var numbers = {
@@ -485,7 +485,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=42]
+[sub_resource type="GDScript" id=38]
 script/source = "extends Sprite
 
 var numbers = {
@@ -526,11 +526,11 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="DynamicFont" id=43]
+[sub_resource type="DynamicFont" id=39]
 size = 32
 font_data = ExtResource( 92 )
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=40]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -556,7 +556,7 @@ tracks/1/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=41]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -582,7 +582,7 @@ tracks/1/keys = {
 "values": [ 2 ]
 }
 
-[sub_resource type="GDScript" id=37]
+[sub_resource type="GDScript" id=42]
 script/source = "extends Node2D
 	
 var px_per_letter = 6#adjust this
@@ -609,7 +609,7 @@ func _process(delta):
 #		text += \"1\"
 #	get_node(\"Label\").text = text"
 
-[sub_resource type="DynamicFont" id=38]
+[sub_resource type="DynamicFont" id=43]
 size = 32
 font_data = ExtResource( 92 )
 
@@ -1061,25 +1061,25 @@ modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 942, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 88 )
-script = SubResource( 39 )
+script = SubResource( 35 )
 
 [node name="num2" type="Sprite" parent="inspector/time"]
 position = Vector2( 910, 378 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 89 )
-script = SubResource( 40 )
+script = SubResource( 36 )
 
 [node name="num3" type="Sprite" parent="inspector/time"]
 position = Vector2( 864, 376 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 90 )
-script = SubResource( 41 )
+script = SubResource( 37 )
 
 [node name="num4" type="Sprite" parent="inspector/time"]
 position = Vector2( 824, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 91 )
-script = SubResource( 42 )
+script = SubResource( 38 )
 
 [node name="Label" type="Label" parent="inspector/time"]
 visible = false
@@ -1088,7 +1088,7 @@ margin_left = 823.0
 margin_top = 364.0
 margin_right = 915.0
 margin_bottom = 396.0
-custom_fonts/font = SubResource( 43 )
+custom_fonts/font = SubResource( 39 )
 text = "00:00"
 
 [node name="Sprite" type="Sprite" parent="inspector/time"]
@@ -1105,20 +1105,20 @@ mouse_filter = 2
 color = Color( 0, 0, 0, 0.666667 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="screen_shadow"]
-anims/fade_in = SubResource( 35 )
-anims/fade_out = SubResource( 36 )
+anims/fade_in = SubResource( 40 )
+anims/fade_out = SubResource( 41 )
 
 [node name="money" type="Node2D" parent="."]
 editor/display_folded = true
 position = Vector2( 873, 498 )
-script = SubResource( 37 )
+script = SubResource( 42 )
 
 [node name="Label" type="Label" parent="money"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
 margin_top = -16.0
 margin_right = 104.0
 margin_bottom = 16.0
-custom_fonts/font = SubResource( 38 )
+custom_fonts/font = SubResource( 43 )
 text = "0"
 
 [node name="Sprite" type="Sprite" parent="money"]
