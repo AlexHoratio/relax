@@ -15,6 +15,7 @@ var rewards = {
 	"fuchsia":600,
 	"daisy":800,
 	"rafflesia":1000,
+	"begonia":1200,
 }
 
 var investments = {
@@ -28,6 +29,7 @@ var investments = {
 	"fuchsia":200,
 	"daisy":250,
 	"rafflesia":300,
+	"begonia":350,
 }
 
 var times = { #in seconds
@@ -41,6 +43,7 @@ var times = { #in seconds
 	"fuchsia":"5000",
 	"daisy":"5500",
 	"rafflesia":"6000",
+	"begonia":"6500",
 }
 
 func _ready():
