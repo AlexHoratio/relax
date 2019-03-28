@@ -989,7 +989,6 @@ texture_hover = ExtResource( 74 )
 texture_click_mask = SubResource( 34 )
 
 [node name="buttons" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 75 )
 
 [node name="harvest" type="TextureButton" parent="buttons"]
