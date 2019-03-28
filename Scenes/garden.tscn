@@ -636,7 +636,6 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 
 [node name="quit" type="Node2D" parent="."]
-editor/display_folded = true
 script = SubResource( 1 )
 
 [node name="quit" type="TextureButton" parent="quit"]
