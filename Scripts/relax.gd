@@ -12,3 +12,9 @@ func _on_back_pressed():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if(anim_name == "fade_out"):
 		get_tree().change_scene(destination)
+
+func time_selected(amount_of_time):
+	destination = "res://Scenes/relaxing.tscn"
+	data.set_value("Data", "amount_of_time", amount_of_time)
+	get_node("CanvasLayer/ColorRect/AnimationPlayer").play("fade_out")
+	

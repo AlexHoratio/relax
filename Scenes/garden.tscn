@@ -1107,7 +1107,6 @@ anims/fade_in = SubResource( 40 )
 anims/fade_out = SubResource( 41 )
 
 [node name="money" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 873, 498 )
 script = SubResource( 42 )
 
