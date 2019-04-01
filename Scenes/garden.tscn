@@ -362,7 +362,7 @@ data = {
 "size": Vector2( 20, 20 )
 }
 
-[sub_resource type="GDScript" id=35]
+[sub_resource type="GDScript" id=45]
 script/source = "extends Sprite
 
 var numbers = {
@@ -403,7 +403,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=36]
+[sub_resource type="GDScript" id=46]
 script/source = "extends Sprite
 
 var numbers = {
@@ -444,7 +444,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=37]
+[sub_resource type="GDScript" id=47]
 script/source = "extends Sprite
 
 var numbers = {
@@ -485,7 +485,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="GDScript" id=38]
+[sub_resource type="GDScript" id=48]
 script/source = "extends Sprite
 
 var numbers = {
@@ -526,7 +526,7 @@ func set_number(number : String):
 	
 	#do a little shake here"
 
-[sub_resource type="DynamicFont" id=39]
+[sub_resource type="DynamicFont" id=49]
 size = 32
 font_data = ExtResource( 92 )
 
@@ -1011,7 +1011,6 @@ texture_pressed = ExtResource( 79 )
 texture_hover = ExtResource( 80 )
 
 [node name="inspector" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 81 )
 
 [node name="names" type="Node2D" parent="inspector"]
@@ -1059,25 +1058,25 @@ modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 942, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 88 )
-script = SubResource( 35 )
+script = SubResource( 45 )
 
 [node name="num2" type="Sprite" parent="inspector/time"]
 position = Vector2( 910, 378 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 89 )
-script = SubResource( 36 )
+script = SubResource( 46 )
 
 [node name="num3" type="Sprite" parent="inspector/time"]
 position = Vector2( 864, 376 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 90 )
-script = SubResource( 37 )
+script = SubResource( 47 )
 
 [node name="num4" type="Sprite" parent="inspector/time"]
 position = Vector2( 824, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 91 )
-script = SubResource( 38 )
+script = SubResource( 48 )
 
 [node name="Label" type="Label" parent="inspector/time"]
 visible = false
@@ -1086,7 +1085,7 @@ margin_left = 823.0
 margin_top = 364.0
 margin_right = 915.0
 margin_bottom = 396.0
-custom_fonts/font = SubResource( 39 )
+custom_fonts/font = SubResource( 49 )
 text = "00:00"
 
 [node name="Sprite" type="Sprite" parent="inspector/time"]

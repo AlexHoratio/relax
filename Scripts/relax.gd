@@ -17,4 +17,3 @@ func time_selected(amount_of_time):
 	destination = "res://Scenes/relaxing.tscn"
 	data.set_value("Data", "amount_of_time", amount_of_time)
 	get_node("CanvasLayer/ColorRect/AnimationPlayer").play("fade_out")
-	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/relax.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/relax_screen.png" type="Texture" id=2]
@@ -6,7 +6,19 @@
 [ext_resource path="res://Graphics/Buttons/Back/down.png" type="Texture" id=4]
 [ext_resource path="res://Graphics/Buttons/Back/over.png" type="Texture" id=5]
 [ext_resource path="res://Graphics/Buttons/Times/30s.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Graphics/Buttons/Times/1m.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Buttons/Times/2m.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Buttons/Times/3m.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Buttons/Times/5m.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Buttons/Times/7m.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Buttons/Times/9m.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Buttons/Times/10m.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Buttons/Times/12m.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Buttons/Times/13m.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Buttons/Times/15m.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Buttons/Times/17m.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Buttons/Times/20m.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=19]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_in"
@@ -72,7 +84,7 @@ func _on_30s_mouse_exited():
 "
 
 [sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 7 )
+font_data = ExtResource( 19 )
 
 [node name="relax" type="Node2D"]
 script = ExtResource( 1 )
@@ -116,10 +128,130 @@ texture_hover = ExtResource( 5 )
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
 margin_left = 476.0
 margin_top = 360.0
-margin_right = 510.0
+margin_right = 518.0
 margin_bottom = 365.0
 rect_scale = Vector2( 4, 4 )
 texture_normal = ExtResource( 6 )
+script = SubResource( 5 )
+
+[node name="1m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 644.0
+margin_top = 260.0
+margin_right = 678.0
+margin_bottom = 265.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 7 )
+script = SubResource( 5 )
+
+[node name="2m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 644.0
+margin_top = 300.0
+margin_right = 678.0
+margin_bottom = 305.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 8 )
+script = SubResource( 5 )
+
+[node name="3m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 644.0
+margin_top = 340.0
+margin_right = 678.0
+margin_bottom = 345.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 9 )
+script = SubResource( 5 )
+
+[node name="5m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 644.0
+margin_top = 380.0
+margin_right = 678.0
+margin_bottom = 385.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 10 )
+script = SubResource( 5 )
+
+[node name="7m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 644.0
+margin_top = 420.0
+margin_right = 678.0
+margin_bottom = 425.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 11 )
+script = SubResource( 5 )
+
+[node name="9m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 644.0
+margin_top = 460.0
+margin_right = 677.0
+margin_bottom = 465.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 12 )
+script = SubResource( 5 )
+
+[node name="10m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 780.0
+margin_top = 260.0
+margin_right = 813.0
+margin_bottom = 265.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 13 )
+script = SubResource( 5 )
+
+[node name="12m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 780.0
+margin_top = 300.0
+margin_right = 813.0
+margin_bottom = 305.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 14 )
+script = SubResource( 5 )
+
+[node name="13m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 780.0
+margin_top = 340.0
+margin_right = 813.0
+margin_bottom = 345.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 15 )
+script = SubResource( 5 )
+
+[node name="15m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 780.0
+margin_top = 380.0
+margin_right = 813.0
+margin_bottom = 385.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 16 )
+script = SubResource( 5 )
+
+[node name="17m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 780.0
+margin_top = 420.0
+margin_right = 813.0
+margin_bottom = 425.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 17 )
+script = SubResource( 5 )
+
+[node name="20m" type="TextureButton" parent="times"]
+modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
+margin_left = 776.0
+margin_top = 460.0
+margin_right = 809.0
+margin_bottom = 465.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 18 )
 script = SubResource( 5 )
 
 [node name="instructions" type="Label" parent="."]
@@ -149,3 +281,39 @@ autowrap = true
 [connection signal="mouse_entered" from="times/30s" to="times/30s" method="_on_30s_mouse_entered"]
 [connection signal="mouse_exited" from="times/30s" to="times/30s" method="_on_30s_mouse_exited"]
 [connection signal="pressed" from="times/30s" to="." method="time_selected" binds= [ "30s" ]]
+[connection signal="mouse_entered" from="times/1m" to="times/1m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/1m" to="times/1m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/1m" to="." method="time_selected" binds= [ "1m" ]]
+[connection signal="mouse_entered" from="times/2m" to="times/2m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/2m" to="times/2m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/2m" to="." method="time_selected" binds= [ "2m" ]]
+[connection signal="mouse_entered" from="times/3m" to="times/3m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/3m" to="times/3m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/3m" to="." method="time_selected" binds= [ "3m" ]]
+[connection signal="mouse_entered" from="times/5m" to="times/5m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/5m" to="times/5m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/5m" to="." method="time_selected" binds= [ "5m" ]]
+[connection signal="mouse_entered" from="times/7m" to="times/7m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/7m" to="times/7m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/7m" to="." method="time_selected" binds= [ "7m" ]]
+[connection signal="mouse_entered" from="times/9m" to="times/9m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/9m" to="times/9m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/9m" to="." method="time_selected" binds= [ "9m" ]]
+[connection signal="mouse_entered" from="times/10m" to="times/10m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/10m" to="times/10m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/10m" to="." method="time_selected" binds= [ "10m" ]]
+[connection signal="mouse_entered" from="times/12m" to="times/12m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/12m" to="times/12m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/12m" to="." method="time_selected" binds= [ "12m" ]]
+[connection signal="mouse_entered" from="times/13m" to="times/13m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/13m" to="times/13m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/13m" to="." method="time_selected" binds= [ "13m" ]]
+[connection signal="mouse_entered" from="times/15m" to="times/15m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/15m" to="times/15m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/15m" to="." method="time_selected" binds= [ "15m" ]]
+[connection signal="mouse_entered" from="times/17m" to="times/17m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/17m" to="times/17m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/17m" to="." method="time_selected" binds= [ "17m" ]]
+[connection signal="mouse_entered" from="times/20m" to="times/20m" method="_on_30s_mouse_entered"]
+[connection signal="mouse_exited" from="times/20m" to="times/20m" method="_on_30s_mouse_exited"]
+[connection signal="pressed" from="times/20m" to="." method="time_selected" binds= [ "20m" ]]

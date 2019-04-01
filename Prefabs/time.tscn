@@ -1,14 +1,12 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scenes/relaxing.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Screens/relax_during.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/time.gd" type="Script" id=3]
-[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=4]
-[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=9]
+[ext_resource path="res://Prefabs/time.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=7]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Sprite
@@ -176,59 +174,37 @@ func set_number(number : String):
 
 [sub_resource type="DynamicFont" id=5]
 size = 32
-font_data = ExtResource( 8 )
+font_data = ExtResource( 6 )
 
-[sub_resource type="Animation" id=6]
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1.93187, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[node name="relaxing" type="Node2D"]
+[node name="time" type="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 480, 270 )
+[node name="num1" type="Sprite" parent="."]
+position = Vector2( 942, 380 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
-
-[node name="timer" type="Node2D" parent="."]
-position = Vector2( 340, 380 )
-script = ExtResource( 3 )
-
-[node name="num1" type="Sprite" parent="timer"]
-position = Vector2( 166, 28 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 4 )
 script = SubResource( 1 )
 
-[node name="num2" type="Sprite" parent="timer"]
-position = Vector2( 134, 26 )
+[node name="num2" type="Sprite" parent="."]
+position = Vector2( 910, 378 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 script = SubResource( 2 )
 
-[node name="num3" type="Sprite" parent="timer"]
-position = Vector2( 88, 24 )
+[node name="num3" type="Sprite" parent="."]
+position = Vector2( 864, 376 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 script = SubResource( 3 )
 
-[node name="num4" type="Sprite" parent="timer"]
-position = Vector2( 48, 28 )
+[node name="num4" type="Sprite" parent="."]
+position = Vector2( 824, 380 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 script = SubResource( 4 )
 
-[node name="Label" type="Label" parent="timer"]
+[node name="Label" type="Label" parent="."]
 visible = false
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
 margin_left = 823.0
@@ -238,20 +214,8 @@ margin_bottom = 396.0
 custom_fonts/font = SubResource( 5 )
 text = "00:00"
 
-[node name="Sprite" type="Sprite" parent="timer"]
-position = Vector2( 112, 26 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 888, 378 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 9 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 960.0
-margin_bottom = 540.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ColorRect"]
-autoplay = "fade_in"
-anims/fade_in = SubResource( 6 )
+texture = ExtResource( 7 )
 
