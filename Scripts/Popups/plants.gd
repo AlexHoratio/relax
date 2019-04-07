@@ -19,6 +19,6 @@ func _on_buy_pressed():
 		emit_signal("take_seed", [get_node("buttons").plant_name])
 		data.set_money(str(int(data.get_money()) - money.investments[get_node("buttons").plant_name]))
 		_on_exit_pressed()
+		get_node("buy/AudioStreamPlayer").play()
 	else:
-		pass
-		#do an "access denied" effect idk
+		get_node("buy/access_denied").play()

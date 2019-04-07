@@ -8,6 +8,7 @@ func _ready():
 func _on_back_pressed():
 	destination = "res://Scenes/garden.tscn"
 	get_node("CanvasLayer/ColorRect/AnimationPlayer").play("fade_out")
+	get_node("back/AudioStreamPlayer").play()
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if(anim_name == "fade_out"):

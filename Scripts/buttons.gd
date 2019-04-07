@@ -18,6 +18,9 @@ func _on_harvest_pressed():
 		data.erase_value("Plots", get_node("../inspector").selected_plot_id)
 		emit_signal("harvested_plant", get_node("../inspector").selected_plot_id)
 		#plot.get_node("sprite").queue_free()
+		get_node("harvest/harvest").play()
+	else:
+		get_node("harvest/cantharvest").play()
 		
 		
 
@@ -27,6 +30,7 @@ func _process(delta):
 func _on_relax_pressed():
 	destination = "res://Scenes/relax.tscn"
 	get_node("../CanvasLayer/ColorRect/AnimationPlayer").play("fade_out")
+	get_node("relax/AudioStreamPlayer").play()
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	get_tree().change_scene(destination)

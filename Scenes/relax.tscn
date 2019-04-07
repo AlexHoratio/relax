@@ -1,24 +1,25 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/relax.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/relax_screen.png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Buttons/Back/normal.png" type="Texture" id=3]
 [ext_resource path="res://Graphics/Buttons/Back/down.png" type="Texture" id=4]
 [ext_resource path="res://Graphics/Buttons/Back/over.png" type="Texture" id=5]
-[ext_resource path="res://Graphics/Buttons/Times/30s.png" type="Texture" id=6]
-[ext_resource path="res://Graphics/Buttons/Times/1m.png" type="Texture" id=7]
-[ext_resource path="res://Graphics/Buttons/Times/2m.png" type="Texture" id=8]
-[ext_resource path="res://Graphics/Buttons/Times/3m.png" type="Texture" id=9]
-[ext_resource path="res://Graphics/Buttons/Times/5m.png" type="Texture" id=10]
-[ext_resource path="res://Graphics/Buttons/Times/7m.png" type="Texture" id=11]
-[ext_resource path="res://Graphics/Buttons/Times/9m.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Buttons/Times/10m.png" type="Texture" id=13]
-[ext_resource path="res://Graphics/Buttons/Times/12m.png" type="Texture" id=14]
-[ext_resource path="res://Graphics/Buttons/Times/13m.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Buttons/Times/15m.png" type="Texture" id=16]
-[ext_resource path="res://Graphics/Buttons/Times/17m.png" type="Texture" id=17]
-[ext_resource path="res://Graphics/Buttons/Times/20m.png" type="Texture" id=18]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://Audio/dev_click.wav" type="AudioStream" id=6]
+[ext_resource path="res://Graphics/Buttons/Times/30s.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Buttons/Times/1m.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Buttons/Times/2m.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Buttons/Times/3m.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Buttons/Times/5m.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Buttons/Times/7m.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Buttons/Times/9m.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Buttons/Times/10m.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Buttons/Times/12m.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Buttons/Times/13m.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Buttons/Times/15m.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Buttons/Times/17m.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Buttons/Times/20m.png" type="Texture" id=19]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=20]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_in"
@@ -73,7 +74,7 @@ func _on_back_mouse_exited():
 	mouse_entered = false
 "
 
-[sub_resource type="GDScript" id=5]
+[sub_resource type="GDScript" id=4]
 script/source = "extends TextureButton
 
 func _on_30s_mouse_entered():
@@ -83,8 +84,8 @@ func _on_30s_mouse_exited():
 	modulate = Color(\"815b40\")
 "
 
-[sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 19 )
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 20 )
 
 [node name="relax" type="Node2D"]
 script = ExtResource( 1 )
@@ -97,7 +98,6 @@ centered = false
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
 modulate = Color( 1, 1, 1, 0.987654 )
 margin_right = 960.0
 margin_bottom = 540.0
@@ -122,6 +122,9 @@ texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="back"]
+stream = ExtResource( 6 )
+
 [node name="times" type="Node2D" parent="."]
 
 [node name="30s" type="TextureButton" parent="times"]
@@ -131,8 +134,8 @@ margin_top = 360.0
 margin_right = 518.0
 margin_bottom = 365.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 6 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 7 )
+script = SubResource( 4 )
 
 [node name="1m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -141,8 +144,8 @@ margin_top = 260.0
 margin_right = 678.0
 margin_bottom = 265.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 7 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 8 )
+script = SubResource( 4 )
 
 [node name="2m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -151,8 +154,8 @@ margin_top = 300.0
 margin_right = 678.0
 margin_bottom = 305.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 8 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 9 )
+script = SubResource( 4 )
 
 [node name="3m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -161,8 +164,8 @@ margin_top = 340.0
 margin_right = 678.0
 margin_bottom = 345.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 9 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 10 )
+script = SubResource( 4 )
 
 [node name="5m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -171,8 +174,8 @@ margin_top = 380.0
 margin_right = 678.0
 margin_bottom = 385.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 10 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 11 )
+script = SubResource( 4 )
 
 [node name="7m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -181,8 +184,8 @@ margin_top = 420.0
 margin_right = 678.0
 margin_bottom = 425.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 11 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 12 )
+script = SubResource( 4 )
 
 [node name="9m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -191,8 +194,8 @@ margin_top = 460.0
 margin_right = 677.0
 margin_bottom = 465.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 12 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 13 )
+script = SubResource( 4 )
 
 [node name="10m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -201,8 +204,8 @@ margin_top = 260.0
 margin_right = 813.0
 margin_bottom = 265.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 13 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 14 )
+script = SubResource( 4 )
 
 [node name="12m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -211,8 +214,8 @@ margin_top = 300.0
 margin_right = 813.0
 margin_bottom = 305.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 14 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 15 )
+script = SubResource( 4 )
 
 [node name="13m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -221,8 +224,8 @@ margin_top = 340.0
 margin_right = 813.0
 margin_bottom = 345.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 15 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 16 )
+script = SubResource( 4 )
 
 [node name="15m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -231,8 +234,8 @@ margin_top = 380.0
 margin_right = 813.0
 margin_bottom = 385.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 16 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 17 )
+script = SubResource( 4 )
 
 [node name="17m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -241,8 +244,8 @@ margin_top = 420.0
 margin_right = 813.0
 margin_bottom = 425.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 17 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 18 )
+script = SubResource( 4 )
 
 [node name="20m" type="TextureButton" parent="times"]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -251,8 +254,8 @@ margin_top = 460.0
 margin_right = 809.0
 margin_bottom = 465.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 18 )
-script = SubResource( 5 )
+texture_normal = ExtResource( 19 )
+script = SubResource( 4 )
 
 [node name="instructions" type="Label" parent="."]
 modulate = Color( 0.505882, 0.356863, 0.25098, 1 )
@@ -260,7 +263,7 @@ margin_left = 48.0
 margin_top = 159.0
 margin_right = 397.0
 margin_bottom = 493.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Okay, so this bit of the game is kind of on the honour system.
 
 Select an amount of time, close your eyes and try to focus all your attention on your breathing.
