@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=2]
+[gd_scene load_steps=143 format=2]
 
 [ext_resource path="res://Graphics/screen.png" type="Texture" id=1]
 [ext_resource path="res://Graphics/Buttons/Quit/normal.png" type="Texture" id=2]
@@ -10,91 +10,93 @@
 [ext_resource path="res://Graphics/Buttons/Plant/down.png" type="Texture" id=8]
 [ext_resource path="res://Graphics/Buttons/Plant/over.png" type="Texture" id=9]
 [ext_resource path="res://Graphics/Buttons/Plant/mask.bmp" type="BitMap" id=10]
-[ext_resource path="res://Scenes/flowerbed.gd" type="Script" id=11]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot1/normal.png" type="Texture" id=12]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot1/over.png" type="Texture" id=13]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot2/normal.png" type="Texture" id=14]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot2/over.png" type="Texture" id=15]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot3/normal.png" type="Texture" id=16]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot3/over.png" type="Texture" id=17]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot4/normal.png" type="Texture" id=18]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot4/over.png" type="Texture" id=19]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot5/normal.png" type="Texture" id=20]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot5/over.png" type="Texture" id=21]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot6/normal.png" type="Texture" id=22]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot6/over.png" type="Texture" id=23]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot7/normal.png" type="Texture" id=24]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot7/over.png" type="Texture" id=25]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot8/normal.png" type="Texture" id=26]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot8/over.png" type="Texture" id=27]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot9/normal.png" type="Texture" id=28]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot9/over.png" type="Texture" id=29]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot10/normal.png" type="Texture" id=30]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot10/over.png" type="Texture" id=31]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot11/normal.png" type="Texture" id=32]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot11/over.png" type="Texture" id=33]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot12/normal.png" type="Texture" id=34]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot12/over.png" type="Texture" id=35]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot13/normal.png" type="Texture" id=36]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot13/over.png" type="Texture" id=37]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot14/normal.png" type="Texture" id=38]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot14/over.png" type="Texture" id=39]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot15/normal.png" type="Texture" id=40]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot15/over.png" type="Texture" id=41]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot16/normal.png" type="Texture" id=42]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot16/over.png" type="Texture" id=43]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot17/normal.png" type="Texture" id=44]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot17/over.png" type="Texture" id=45]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot18/normal.png" type="Texture" id=46]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot18/over.png" type="Texture" id=47]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot19/normal.png" type="Texture" id=48]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot19/over.png" type="Texture" id=49]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot20/normal.png" type="Texture" id=50]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot20/over.png" type="Texture" id=51]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot21/normal.png" type="Texture" id=52]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot21/over.png" type="Texture" id=53]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot22/normal.png" type="Texture" id=54]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot22/over.png" type="Texture" id=55]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot23/normal.png" type="Texture" id=56]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot23/over.png" type="Texture" id=57]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot24/normal.png" type="Texture" id=58]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot24/over.png" type="Texture" id=59]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot25/normal.png" type="Texture" id=60]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot25/over.png" type="Texture" id=61]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot26/normal.png" type="Texture" id=62]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot26/over.png" type="Texture" id=63]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot27/normal.png" type="Texture" id=64]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot27/over.png" type="Texture" id=65]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot28/normal.png" type="Texture" id=66]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot28/over.png" type="Texture" id=67]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot29/normal.png" type="Texture" id=68]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot29/over.png" type="Texture" id=69]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot30/normal.png" type="Texture" id=70]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot30/over.png" type="Texture" id=71]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot31/normal.png" type="Texture" id=72]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot31/over.png" type="Texture" id=73]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot32/normal.png" type="Texture" id=74]
-[ext_resource path="res://Graphics/Flowerbed/Plots/plot32/over.png" type="Texture" id=75]
-[ext_resource path="res://Scripts/buttons.gd" type="Script" id=76]
-[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=77]
-[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=78]
-[ext_resource path="res://Graphics/Buttons/Relax/normal.png" type="Texture" id=79]
-[ext_resource path="res://Graphics/Buttons/Relax/down.png" type="Texture" id=80]
-[ext_resource path="res://Graphics/Buttons/Relax/over.png" type="Texture" id=81]
-[ext_resource path="res://Scripts/inspector.gd" type="Script" id=82]
-[ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=83]
-[ext_resource path="res://Graphics/Plants/InspectorNames/violet.png" type="Texture" id=84]
-[ext_resource path="res://Graphics/Plants/InspectorNames/chamomile.png" type="Texture" id=85]
-[ext_resource path="res://Graphics/Plants/InspectorNames/sunflower.png" type="Texture" id=86]
-[ext_resource path="res://Graphics/Plants/InspectorNames/rosebush.png" type="Texture" id=87]
-[ext_resource path="res://Graphics/Plants/InspectorNames/glooptree.png" type="Texture" id=88]
-[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=89]
-[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=90]
-[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=91]
-[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=92]
-[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=93]
-[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=94]
-[ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=95]
+[ext_resource path="res://Scenes/innoculate.gd" type="Script" id=11]
+[ext_resource path="res://Graphics/Buttons/Innoculate/normal.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/flowerbed.gd" type="Script" id=13]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot1/normal.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot1/over.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot2/normal.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot2/over.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot3/normal.png" type="Texture" id=18]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot3/over.png" type="Texture" id=19]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot4/normal.png" type="Texture" id=20]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot4/over.png" type="Texture" id=21]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot5/normal.png" type="Texture" id=22]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot5/over.png" type="Texture" id=23]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot6/normal.png" type="Texture" id=24]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot6/over.png" type="Texture" id=25]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot7/normal.png" type="Texture" id=26]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot7/over.png" type="Texture" id=27]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot8/normal.png" type="Texture" id=28]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot8/over.png" type="Texture" id=29]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot9/normal.png" type="Texture" id=30]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot9/over.png" type="Texture" id=31]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot10/normal.png" type="Texture" id=32]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot10/over.png" type="Texture" id=33]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot11/normal.png" type="Texture" id=34]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot11/over.png" type="Texture" id=35]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot12/normal.png" type="Texture" id=36]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot12/over.png" type="Texture" id=37]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot13/normal.png" type="Texture" id=38]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot13/over.png" type="Texture" id=39]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot14/normal.png" type="Texture" id=40]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot14/over.png" type="Texture" id=41]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot15/normal.png" type="Texture" id=42]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot15/over.png" type="Texture" id=43]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot16/normal.png" type="Texture" id=44]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot16/over.png" type="Texture" id=45]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot17/normal.png" type="Texture" id=46]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot17/over.png" type="Texture" id=47]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot18/normal.png" type="Texture" id=48]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot18/over.png" type="Texture" id=49]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot19/normal.png" type="Texture" id=50]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot19/over.png" type="Texture" id=51]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot20/normal.png" type="Texture" id=52]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot20/over.png" type="Texture" id=53]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot21/normal.png" type="Texture" id=54]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot21/over.png" type="Texture" id=55]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot22/normal.png" type="Texture" id=56]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot22/over.png" type="Texture" id=57]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot23/normal.png" type="Texture" id=58]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot23/over.png" type="Texture" id=59]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot24/normal.png" type="Texture" id=60]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot24/over.png" type="Texture" id=61]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot25/normal.png" type="Texture" id=62]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot25/over.png" type="Texture" id=63]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot26/normal.png" type="Texture" id=64]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot26/over.png" type="Texture" id=65]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot27/normal.png" type="Texture" id=66]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot27/over.png" type="Texture" id=67]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot28/normal.png" type="Texture" id=68]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot28/over.png" type="Texture" id=69]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot29/normal.png" type="Texture" id=70]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot29/over.png" type="Texture" id=71]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot30/normal.png" type="Texture" id=72]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot30/over.png" type="Texture" id=73]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot31/normal.png" type="Texture" id=74]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot31/over.png" type="Texture" id=75]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot32/normal.png" type="Texture" id=76]
+[ext_resource path="res://Graphics/Flowerbed/Plots/plot32/over.png" type="Texture" id=77]
+[ext_resource path="res://Scripts/buttons.gd" type="Script" id=78]
+[ext_resource path="res://Graphics/Buttons/Harvest/normal.png" type="Texture" id=79]
+[ext_resource path="res://Graphics/Buttons/Harvest/disabled.png" type="Texture" id=80]
+[ext_resource path="res://Graphics/Buttons/Relax/normal.png" type="Texture" id=81]
+[ext_resource path="res://Graphics/Buttons/Relax/down.png" type="Texture" id=82]
+[ext_resource path="res://Graphics/Buttons/Relax/over.png" type="Texture" id=83]
+[ext_resource path="res://Scripts/inspector.gd" type="Script" id=84]
+[ext_resource path="res://Graphics/Plants/InspectorNames/rose.png" type="Texture" id=85]
+[ext_resource path="res://Graphics/Plants/InspectorNames/violet.png" type="Texture" id=86]
+[ext_resource path="res://Graphics/Plants/InspectorNames/chamomile.png" type="Texture" id=87]
+[ext_resource path="res://Graphics/Plants/InspectorNames/sunflower.png" type="Texture" id=88]
+[ext_resource path="res://Graphics/Plants/InspectorNames/rosebush.png" type="Texture" id=89]
+[ext_resource path="res://Graphics/Plants/InspectorNames/glooptree.png" type="Texture" id=90]
+[ext_resource path="res://Graphics/Numbers/Column1/0.png" type="Texture" id=91]
+[ext_resource path="res://Graphics/Numbers/Column2/0.png" type="Texture" id=92]
+[ext_resource path="res://Graphics/Numbers/Column3/9.png" type="Texture" id=93]
+[ext_resource path="res://Graphics/Numbers/Column4/5.png" type="Texture" id=94]
+[ext_resource path="res://Graphics/Fonts/small_pixel.ttf" type="DynamicFontData" id=95]
+[ext_resource path="res://Graphics/Numbers/colon.png" type="Texture" id=96]
+[ext_resource path="res://Graphics/Icons/euro_icon.png" type="Texture" id=97]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -531,7 +533,7 @@ func set_number(number : String):
 
 [sub_resource type="DynamicFont" id=39]
 size = 32
-font_data = ExtResource( 93 )
+font_data = ExtResource( 95 )
 
 [sub_resource type="Animation" id=40]
 tracks/0/type = "value"
@@ -614,7 +616,7 @@ func _process(delta):
 
 [sub_resource type="DynamicFont" id=43]
 size = 32
-font_data = ExtResource( 93 )
+font_data = ExtResource( 95 )
 
 [sub_resource type="Animation" id=44]
 resource_name = "fade_in"
@@ -670,7 +672,6 @@ texture_click_mask = ExtResource( 5 )
 stream = ExtResource( 6 )
 
 [node name="plant" type="Node2D" parent="."]
-editor/display_folded = true
 script = SubResource( 2 )
 
 [node name="plant" type="TextureButton" parent="plant"]
@@ -686,10 +687,23 @@ texture_click_mask = ExtResource( 10 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="plant"]
 stream = ExtResource( 6 )
 
+[node name="innoculate" type="Node2D" parent="."]
+script = ExtResource( 11 )
+
+[node name="innoculate" type="TextureButton" parent="innoculate"]
+margin_left = 292.0
+margin_right = 397.0
+margin_bottom = 23.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 12 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="innoculate"]
+stream = ExtResource( 6 )
+
 [node name="flowerbed" type="Node2D" parent="."]
 editor/display_folded = true
 scale = Vector2( 4, 4 )
-script = ExtResource( 11 )
+script = ExtResource( 13 )
 
 [node name="plot1" type="TextureButton" parent="flowerbed"]
 margin_left = 41.5
@@ -697,8 +711,8 @@ margin_top = 30.5
 margin_right = 61.5
 margin_bottom = 50.5
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 12 )
-texture_hover = ExtResource( 13 )
+texture_normal = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
 texture_click_mask = SubResource( 3 )
 
 [node name="plot2" type="TextureButton" parent="flowerbed"]
@@ -707,8 +721,8 @@ margin_top = 30.5
 margin_right = 79.5
 margin_bottom = 50.5
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 14 )
-texture_hover = ExtResource( 15 )
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
 texture_click_mask = SubResource( 4 )
 
 [node name="plot3" type="TextureButton" parent="flowerbed"]
@@ -717,8 +731,8 @@ margin_top = 32.25
 margin_right = 97.5
 margin_bottom = 52.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 16 )
-texture_hover = ExtResource( 17 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 19 )
 texture_click_mask = SubResource( 5 )
 
 [node name="plot4" type="TextureButton" parent="flowerbed"]
@@ -727,8 +741,8 @@ margin_top = 30.5
 margin_right = 116.5
 margin_bottom = 50.5
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 18 )
-texture_hover = ExtResource( 19 )
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
 texture_click_mask = SubResource( 6 )
 
 [node name="plot5" type="TextureButton" parent="flowerbed"]
@@ -737,8 +751,8 @@ margin_top = 32.25
 margin_right = 135.5
 margin_bottom = 52.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 20 )
-texture_hover = ExtResource( 21 )
+texture_normal = ExtResource( 22 )
+texture_hover = ExtResource( 23 )
 texture_click_mask = SubResource( 7 )
 
 [node name="plot6" type="TextureButton" parent="flowerbed"]
@@ -747,8 +761,8 @@ margin_top = 30.5
 margin_right = 152.75
 margin_bottom = 50.5
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 22 )
-texture_hover = ExtResource( 23 )
+texture_normal = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
 texture_click_mask = SubResource( 8 )
 
 [node name="plot7" type="TextureButton" parent="flowerbed"]
@@ -757,8 +771,8 @@ margin_top = 30.5
 margin_right = 170.5
 margin_bottom = 50.5
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 24 )
-texture_hover = ExtResource( 25 )
+texture_normal = ExtResource( 26 )
+texture_hover = ExtResource( 27 )
 texture_click_mask = SubResource( 9 )
 
 [node name="plot8" type="TextureButton" parent="flowerbed"]
@@ -767,8 +781,8 @@ margin_top = 30.5
 margin_right = 186.75
 margin_bottom = 50.5
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 26 )
-texture_hover = ExtResource( 27 )
+texture_normal = ExtResource( 28 )
+texture_hover = ExtResource( 29 )
 texture_click_mask = SubResource( 10 )
 
 [node name="plot9" type="TextureButton" parent="flowerbed"]
@@ -777,8 +791,8 @@ margin_top = 49.25
 margin_right = 61.5
 margin_bottom = 69.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 28 )
-texture_hover = ExtResource( 29 )
+texture_normal = ExtResource( 30 )
+texture_hover = ExtResource( 31 )
 texture_click_mask = SubResource( 11 )
 
 [node name="plot10" type="TextureButton" parent="flowerbed"]
@@ -787,8 +801,8 @@ margin_top = 49.25
 margin_right = 78.5
 margin_bottom = 69.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 30 )
-texture_hover = ExtResource( 31 )
+texture_normal = ExtResource( 32 )
+texture_hover = ExtResource( 33 )
 texture_click_mask = SubResource( 12 )
 
 [node name="plot11" type="TextureButton" parent="flowerbed"]
@@ -797,8 +811,8 @@ margin_top = 49.25
 margin_right = 95.75
 margin_bottom = 69.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 32 )
-texture_hover = ExtResource( 33 )
+texture_normal = ExtResource( 34 )
+texture_hover = ExtResource( 35 )
 texture_click_mask = SubResource( 13 )
 
 [node name="plot12" type="TextureButton" parent="flowerbed"]
@@ -807,8 +821,8 @@ margin_top = 49.25
 margin_right = 114.75
 margin_bottom = 69.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 34 )
-texture_hover = ExtResource( 35 )
+texture_normal = ExtResource( 36 )
+texture_hover = ExtResource( 37 )
 texture_click_mask = SubResource( 14 )
 
 [node name="plot13" type="TextureButton" parent="flowerbed"]
@@ -817,8 +831,8 @@ margin_top = 49.25
 margin_right = 134.75
 margin_bottom = 69.25
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 36 )
-texture_hover = ExtResource( 37 )
+texture_normal = ExtResource( 38 )
+texture_hover = ExtResource( 39 )
 texture_click_mask = SubResource( 15 )
 
 [node name="plot14" type="TextureButton" parent="flowerbed"]
@@ -827,8 +841,8 @@ margin_top = 47.75
 margin_right = 152.75
 margin_bottom = 67.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 38 )
-texture_hover = ExtResource( 39 )
+texture_normal = ExtResource( 40 )
+texture_hover = ExtResource( 41 )
 texture_click_mask = SubResource( 16 )
 
 [node name="plot15" type="TextureButton" parent="flowerbed"]
@@ -837,8 +851,8 @@ margin_top = 47.75
 margin_right = 169.5
 margin_bottom = 67.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 40 )
-texture_hover = ExtResource( 41 )
+texture_normal = ExtResource( 42 )
+texture_hover = ExtResource( 43 )
 texture_click_mask = SubResource( 17 )
 
 [node name="plot16" type="TextureButton" parent="flowerbed"]
@@ -847,8 +861,8 @@ margin_top = 47.75
 margin_right = 186.75
 margin_bottom = 67.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 42 )
-texture_hover = ExtResource( 43 )
+texture_normal = ExtResource( 44 )
+texture_hover = ExtResource( 45 )
 texture_click_mask = SubResource( 18 )
 
 [node name="plot17" type="TextureButton" parent="flowerbed"]
@@ -857,8 +871,8 @@ margin_top = 65.75
 margin_right = 61.5
 margin_bottom = 85.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 44 )
-texture_hover = ExtResource( 45 )
+texture_normal = ExtResource( 46 )
+texture_hover = ExtResource( 47 )
 texture_click_mask = SubResource( 19 )
 
 [node name="plot18" type="TextureButton" parent="flowerbed"]
@@ -867,8 +881,8 @@ margin_top = 64.75
 margin_right = 79.5
 margin_bottom = 84.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 46 )
-texture_hover = ExtResource( 47 )
+texture_normal = ExtResource( 48 )
+texture_hover = ExtResource( 49 )
 texture_click_mask = SubResource( 20 )
 
 [node name="plot19" type="TextureButton" parent="flowerbed"]
@@ -877,8 +891,8 @@ margin_top = 64.75
 margin_right = 96.75
 margin_bottom = 84.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 48 )
-texture_hover = ExtResource( 49 )
+texture_normal = ExtResource( 50 )
+texture_hover = ExtResource( 51 )
 texture_click_mask = SubResource( 21 )
 
 [node name="plot20" type="TextureButton" parent="flowerbed"]
@@ -887,8 +901,8 @@ margin_top = 64.75
 margin_right = 115.75
 margin_bottom = 84.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 50 )
-texture_hover = ExtResource( 51 )
+texture_normal = ExtResource( 52 )
+texture_hover = ExtResource( 53 )
 texture_click_mask = SubResource( 22 )
 
 [node name="plot21" type="TextureButton" parent="flowerbed"]
@@ -897,8 +911,8 @@ margin_top = 64.75
 margin_right = 134.75
 margin_bottom = 84.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 52 )
-texture_hover = ExtResource( 53 )
+texture_normal = ExtResource( 54 )
+texture_hover = ExtResource( 55 )
 texture_click_mask = SubResource( 23 )
 
 [node name="plot22" type="TextureButton" parent="flowerbed"]
@@ -907,8 +921,8 @@ margin_top = 64.0
 margin_right = 152.75
 margin_bottom = 84.0
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 54 )
-texture_hover = ExtResource( 55 )
+texture_normal = ExtResource( 56 )
+texture_hover = ExtResource( 57 )
 texture_click_mask = SubResource( 24 )
 
 [node name="plot23" type="TextureButton" parent="flowerbed"]
@@ -917,8 +931,8 @@ margin_top = 64.0
 margin_right = 169.5
 margin_bottom = 84.0
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 56 )
-texture_hover = ExtResource( 57 )
+texture_normal = ExtResource( 58 )
+texture_hover = ExtResource( 59 )
 texture_click_mask = SubResource( 25 )
 
 [node name="plot24" type="TextureButton" parent="flowerbed"]
@@ -927,8 +941,8 @@ margin_top = 64.0
 margin_right = 185.75
 margin_bottom = 84.0
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 58 )
-texture_hover = ExtResource( 59 )
+texture_normal = ExtResource( 60 )
+texture_hover = ExtResource( 61 )
 texture_click_mask = SubResource( 26 )
 
 [node name="plot25" type="TextureButton" parent="flowerbed"]
@@ -937,8 +951,8 @@ margin_top = 79.75
 margin_right = 62.5
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 60 )
-texture_hover = ExtResource( 61 )
+texture_normal = ExtResource( 62 )
+texture_hover = ExtResource( 63 )
 texture_click_mask = SubResource( 27 )
 
 [node name="plot26" type="TextureButton" parent="flowerbed"]
@@ -947,8 +961,8 @@ margin_top = 79.75
 margin_right = 79.5
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 62 )
-texture_hover = ExtResource( 63 )
+texture_normal = ExtResource( 64 )
+texture_hover = ExtResource( 65 )
 texture_click_mask = SubResource( 28 )
 
 [node name="plot27" type="TextureButton" parent="flowerbed"]
@@ -957,8 +971,8 @@ margin_top = 79.75
 margin_right = 96.75
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 64 )
-texture_hover = ExtResource( 65 )
+texture_normal = ExtResource( 66 )
+texture_hover = ExtResource( 67 )
 texture_click_mask = SubResource( 29 )
 
 [node name="plot28" type="TextureButton" parent="flowerbed"]
@@ -967,8 +981,8 @@ margin_top = 79.75
 margin_right = 115.75
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 66 )
-texture_hover = ExtResource( 67 )
+texture_normal = ExtResource( 68 )
+texture_hover = ExtResource( 69 )
 texture_click_mask = SubResource( 30 )
 
 [node name="plot29" type="TextureButton" parent="flowerbed"]
@@ -977,8 +991,8 @@ margin_top = 79.75
 margin_right = 133.75
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 68 )
-texture_hover = ExtResource( 69 )
+texture_normal = ExtResource( 70 )
+texture_hover = ExtResource( 71 )
 texture_click_mask = SubResource( 31 )
 
 [node name="plot30" type="TextureButton" parent="flowerbed"]
@@ -987,8 +1001,8 @@ margin_top = 79.75
 margin_right = 151.5
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 70 )
-texture_hover = ExtResource( 71 )
+texture_normal = ExtResource( 72 )
+texture_hover = ExtResource( 73 )
 texture_click_mask = SubResource( 32 )
 
 [node name="plot31" type="TextureButton" parent="flowerbed"]
@@ -997,8 +1011,8 @@ margin_top = 79.75
 margin_right = 168.75
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 72 )
-texture_hover = ExtResource( 73 )
+texture_normal = ExtResource( 74 )
+texture_hover = ExtResource( 75 )
 texture_click_mask = SubResource( 33 )
 
 [node name="plot32" type="TextureButton" parent="flowerbed"]
@@ -1007,8 +1021,8 @@ margin_top = 79.75
 margin_right = 185.75
 margin_bottom = 99.75
 shortcut_in_tooltip = false
-texture_normal = ExtResource( 74 )
-texture_hover = ExtResource( 75 )
+texture_normal = ExtResource( 76 )
+texture_hover = ExtResource( 77 )
 texture_click_mask = SubResource( 34 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="flowerbed"]
@@ -1016,7 +1030,7 @@ stream = ExtResource( 6 )
 
 [node name="buttons" type="Node2D" parent="."]
 editor/display_folded = true
-script = ExtResource( 76 )
+script = ExtResource( 78 )
 
 [node name="harvest" type="TextureButton" parent="buttons"]
 margin_left = 21.0
@@ -1025,8 +1039,8 @@ margin_right = 44.0
 margin_bottom = 229.0
 rect_scale = Vector2( 4, 4 )
 disabled = true
-texture_normal = ExtResource( 77 )
-texture_disabled = ExtResource( 78 )
+texture_normal = ExtResource( 79 )
+texture_disabled = ExtResource( 80 )
 
 [node name="harvest" type="AudioStreamPlayer" parent="buttons/harvest"]
 stream = ExtResource( 6 )
@@ -1041,16 +1055,16 @@ margin_top = 448.0
 margin_right = 308.0
 margin_bottom = 467.0
 rect_scale = Vector2( 4, 4 )
-texture_normal = ExtResource( 79 )
-texture_pressed = ExtResource( 80 )
-texture_hover = ExtResource( 81 )
+texture_normal = ExtResource( 81 )
+texture_pressed = ExtResource( 82 )
+texture_hover = ExtResource( 83 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="buttons/relax"]
 stream = ExtResource( 6 )
 
 [node name="inspector" type="Node2D" parent="."]
 editor/display_folded = true
-script = ExtResource( 82 )
+script = ExtResource( 84 )
 
 [node name="names" type="Node2D" parent="inspector"]
 
@@ -1058,37 +1072,37 @@ script = ExtResource( 82 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 864, 204 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 83 )
+texture = ExtResource( 85 )
 
 [node name="violet" type="Sprite" parent="inspector/names"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 873, 227 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 84 )
+texture = ExtResource( 86 )
 
 [node name="chamomile" type="Sprite" parent="inspector/names"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 862, 244 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 85 )
+texture = ExtResource( 87 )
 
 [node name="sunflower" type="Sprite" parent="inspector/names"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 870, 244 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 86 )
+texture = ExtResource( 88 )
 
 [node name="rosebush" type="Sprite" parent="inspector/names"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 861, 234 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 87 )
+texture = ExtResource( 89 )
 
 [node name="glooptree" type="Sprite" parent="inspector/names"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 852, 260 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 88 )
+texture = ExtResource( 90 )
 
 [node name="time" type="Node2D" parent="inspector"]
 modulate = Color( 1, 1, 1, 0 )
@@ -1096,25 +1110,25 @@ modulate = Color( 1, 1, 1, 0 )
 [node name="num1" type="Sprite" parent="inspector/time"]
 position = Vector2( 942, 380 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 89 )
+texture = ExtResource( 91 )
 script = SubResource( 35 )
 
 [node name="num2" type="Sprite" parent="inspector/time"]
 position = Vector2( 910, 378 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 90 )
+texture = ExtResource( 92 )
 script = SubResource( 36 )
 
 [node name="num3" type="Sprite" parent="inspector/time"]
 position = Vector2( 864, 376 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 91 )
+texture = ExtResource( 93 )
 script = SubResource( 37 )
 
 [node name="num4" type="Sprite" parent="inspector/time"]
 position = Vector2( 824, 380 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 92 )
+texture = ExtResource( 94 )
 script = SubResource( 38 )
 
 [node name="Label" type="Label" parent="inspector/time"]
@@ -1130,7 +1144,7 @@ text = "00:00"
 [node name="Sprite" type="Sprite" parent="inspector/time"]
 position = Vector2( 888, 378 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 94 )
+texture = ExtResource( 96 )
 
 [node name="screen_shadow" type="ColorRect" parent="."]
 editor/display_folded = true
@@ -1145,6 +1159,7 @@ anims/fade_in = SubResource( 40 )
 anims/fade_out = SubResource( 41 )
 
 [node name="money" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 873, 498 )
 script = SubResource( 42 )
 
@@ -1159,11 +1174,12 @@ text = "0"
 [node name="Sprite" type="Sprite" parent="money"]
 position = Vector2( -16, 0 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 95 )
+texture = ExtResource( 97 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 margin_right = 960.0
 margin_bottom = 540.0
 mouse_filter = 2
@@ -1180,6 +1196,7 @@ anims/fade_out = SubResource( 45 )
 [connection signal="mouse_entered" from="plant/plant" to="plant" method="_on_plant_mouse_entered"]
 [connection signal="mouse_exited" from="plant/plant" to="plant" method="_on_plant_mouse_exited"]
 [connection signal="pressed" from="plant/plant" to="plant" method="_on_plant_pressed"]
+[connection signal="pressed" from="innoculate/innoculate" to="innoculate" method="_on_innoculate_pressed"]
 [connection signal="pressed" from="buttons/harvest" to="buttons" method="_on_harvest_pressed"]
 [connection signal="pressed" from="buttons/relax" to="buttons" method="_on_relax_pressed"]
 [connection signal="animation_finished" from="CanvasLayer/ColorRect/AnimationPlayer" to="buttons" method="_on_AnimationPlayer_animation_finished"]
