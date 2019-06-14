@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/windswept-by-kevin-macleod.ogg-e78999cf89d475262fd798e7ebbfed02.oggstr"
+
+[deps]
+
+source_file="res://Audio/windswept-by-kevin-macleod.ogg"
+dest_files=[ "res://.import/windswept-by-kevin-macleod.ogg-e78999cf89d475262fd798e7ebbfed02.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

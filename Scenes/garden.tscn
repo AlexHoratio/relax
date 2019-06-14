@@ -1208,7 +1208,6 @@ color = Color( 0, 0, 0, 1 )
 autoplay = "fade_in"
 anims/fade_in = SubResource( 44 )
 anims/fade_out = SubResource( 45 )
-
 [connection signal="mouse_entered" from="quit/quit" to="quit" method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="quit/quit" to="quit" method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="quit/quit" to="quit" method="_on_quit_pressed"]
